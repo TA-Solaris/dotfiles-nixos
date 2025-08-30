@@ -20,6 +20,6 @@
   alacritty.enable = lib.mkDefault true;
   tmux.enable = lib.mkDefault true;
   neovim.enable = lib.mkDefault true;
-  dconf.enable = lib.mkDefault true;
+  dconf-config.enable = lib.mkDefault true;
 
 }

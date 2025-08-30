@@ -1,10 +1,10 @@
 { pkgs, lib, config, ... }: {
   
   options = {
-    dconf.enable = lib.mkEnableOption "enables dconf";
+    dconf-config.enable = lib.mkEnableOption "enables dconf config";
   };
 
-  config = lib.mkIf config.dconf.enable {
+  config = lib.mkIf config.dconf-config.enable {
     dconf.enable = true;
 
     dconf.settings = {
