@@ -21,12 +21,9 @@
     # Removed packages
     environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs gnome-console geary epiphany yelp ];
     
-    # Systray icons
-    environment.systemPackages = [ pkgs.gnomeExtensions.appindicator  ];
-    services.udev.packages = [ pkgs.gnome-settings-daemon ];
-    
-    # Other extensions
+    # Systray icons and extensions
     environment.systemPackages = [
+      pkgs.gnomeExtensions.appindicator
       pkgs.gnomeExtensions.blur-my-shell
       pkgs.gnomeExtensions.caffeine
       pkgs.gnomeExtensions.clipboard-indicator
@@ -40,6 +37,7 @@
       pkgs.gnomeExtensions.removable-drive-menu
       pkgs.gnomeExtensions.screenshot-window-sizer
     ];
+    services.udev.packages = [ pkgs.gnome-settings-daemon ];
     
     # Gnome games
     services.gnome.games.enable = true;
