@@ -10,27 +10,28 @@
       enableCompletion = true;
 
       zplug = {
-      enable = true;
-      plugins = [
-        {
-          name = "zsh-users/zsh-autosuggestions";
-        }
-        {
-          name = "zsh-users/zsh-syntax-highlighting";
-        }
-        {
-          name = "romkatv/powerlevel10k";
-          tags = [ "as:theme" "depth:1" ];
-        }
-        {
-          name = "plugins/git";
-          tags = [ "from:oh-my-zsh" "depth:1" ];
-        }
-        {
-          name = "plugins/zoxide";
-          tags = [ "from:oh-my-zsh" "depth:1" ];
-        }
-      ];
+        enable = true;
+        plugins = [
+          {
+            name = "zsh-users/zsh-autosuggestions";
+          }
+          {
+            name = "zsh-users/zsh-syntax-highlighting";
+          }
+          {
+            name = "romkatv/powerlevel10k";
+            tags = [ "as:theme" "depth:1" ];
+          }
+          {
+            name = "plugins/git";
+            tags = [ "from:oh-my-zsh" "depth:1" ];
+          }
+          {
+            name = "plugins/zoxide";
+            tags = [ "from:oh-my-zsh" "depth:1" ];
+          }
+        ];
+      };
       
       initExtra = ''
 	if command -v tmux >/dev/null; then
