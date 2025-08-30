@@ -33,7 +33,7 @@
         ];
       };
       
-      initExtra = ''
+      initContent = ''
 	if command -v tmux >/dev/null; then
 	  if [ -z "$TMUX" ]; then
 	    if [ "$PWD" != "$HOME" ]; then
@@ -50,6 +50,8 @@
     };
     
     home.file.".p10k.zsh".source = ./.p10k.zsh;
+    
+    home.shell = pkgs.zsh;
   };
 
 }
