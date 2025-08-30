@@ -19,11 +19,14 @@
     };
     
     # Removed packages
-    environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs gnome-console geary ];
+    environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs gnome-console geary epiphany yelp ];
     
     # Systray icons
     environment.systemPackages = [ pkgs.gnomeExtensions.appindicator  ];
     services.udev.packages = [ pkgs.gnome-settings-daemon ];
+    
+    # Gnome games
+    services.gnome.games.enable = true;
   };
 
 }
