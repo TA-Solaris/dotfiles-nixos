@@ -13,6 +13,12 @@
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
+    packages."x86_64-linux".default = 
+      (nvf.lib.neovimConfiguration {
+        pkgs = nixpkgs.legacyPackages."x86_64-linux";
+        modules = [ "./modules/home-manager/neovim/nvf-config.nix" ];
+      }).neovim;
+  
     nixosConfigurations = {
       ed-nixos = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};

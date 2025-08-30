@@ -8,7 +8,7 @@
     ./shell-aliases.nix
     ./alacritty.nix
     ./tmux.nix
-    ./neovim.nix
+    ./neovim/neovim.nix
   ];
   
   git.enable = lib.mkDefault true;
