@@ -1,5 +1,11 @@
 { pkgs, lib, ... }: {
   vim = {
+    theme = {
+      enable = true;
+      name = "tokyonight";
+      style = "dark";
+    };
+    
     telescope.enable = true;
       
     languages = {
