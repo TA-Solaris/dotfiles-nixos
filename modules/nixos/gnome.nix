@@ -17,6 +17,9 @@
       layout = "gb";
       variant = "";
     };
+    
+    # Removed packages
+    environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs gnome-console ];
   };
 
 }
