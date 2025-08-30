@@ -8,7 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../modules/default.nix
+      ../../modules/nixos/default.nix
     ];
 
   # Bootloader.
@@ -79,9 +79,8 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
      neovim
-     git
      alacritty
-     wget
+     # wget
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

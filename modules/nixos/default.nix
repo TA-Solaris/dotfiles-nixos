@@ -10,6 +10,6 @@
   users.ed.enable = lib.mkDefault true;
   gnome.enable = lib.mkDefault true;
   pipewire.enable = lib.mkDefault true;
-  network-manage.enable = lib.mkDefault true;
+  network-manager.enable = lib.mkDefault true;
 
 }

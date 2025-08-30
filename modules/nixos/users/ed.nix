@@ -1,7 +1,7 @@
 { pkgs, lib, config, ... }: {
   
   options = {
-    config.users.ed.enable = lib.mkEnableOption "enable user ed";
+    users.ed.enable = lib.mkEnableOption "enable user ed";
   };
   
   config = lib.mkIf config.users.ed.enable {
