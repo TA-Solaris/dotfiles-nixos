@@ -6,6 +6,9 @@
     ./atuin.nix
     ./zoxide.nix
     ./shell-aliases.nix
+    ./fonts.nix
+    ./alacritty.nix
+    ./tmux/tmux.nix
   ];
   
   git.enable = lib.mkDefault true;
@@ -13,5 +16,8 @@
   atuin.enable = lib.mkDefault true;
   zoxide.enable = lib.mkDefault true;
   shell-aliases.enable = lib.mkDefault true;
+  fonts.enable = lib.mkDefault true;
+  alacritty.enable = lib.mkDefault true;
+  tmux.enable = lib.mkDefault true;
 
 }
