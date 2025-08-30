@@ -7,11 +7,30 @@
   config = lib.mkIf config.zsh.enable {
     programs.zsh = {
       enable = true;
-      ohMyZsh = {
-        enable = true;
-        theme = "powerlevel10k/powerlevel10k";
-        plugins = [ "git" "zsh-autosuggestions" "zsh-syntax-highlighting" ];
-      };
+      enableCompletion = true;
+
+      zplug = {
+      enable = true;
+      plugins = [
+        {
+          name = "zsh-users/zsh-autosuggestions";
+        }
+        {
+          name = "zsh-users/zsh-syntax-highlighting";
+        }
+        {
+          name = "romkatv/powerlevel10k";
+          tags = [ "as:theme" "depth:1" ];
+        }
+        {
+          name = "plugins/git";
+          tags = [ "from:oh-my-zsh" "depth:1" ];
+        }
+        {
+          name = "plugins/zoxide";
+          tags = [ "from:oh-my-zsh" "depth:1" ];
+        }
+      ];
       
       initExtra = ''
 	if command -v tmux >/dev/null; then
@@ -23,6 +42,9 @@
 	    fi
 	  fi
 	fi
+	
+	# Load Powerlevel10k config if present
+        [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
       '';
     };
     
