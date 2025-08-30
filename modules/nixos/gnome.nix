@@ -19,7 +19,11 @@
     };
     
     # Removed packages
-    environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs gnome-console ];
+    environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs gnome-console geary ];
+    
+    # Systray icons
+    environment.systemPackages = [ pkgs.gnomeExtensions.appindicator  ];
+    services.udev.packages = [ pkgs.gnome-settings-daemon ];
   };
 
 }
