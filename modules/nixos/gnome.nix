@@ -28,7 +28,7 @@
       pkgs.gnomeExtensions.caffeine
       pkgs.gnomeExtensions.clipboard-indicator
       pkgs.gnomeExtensions.dash-to-dock
-      pkgs.gnomeExtensions.desktop-icons-ng
+      pkgs.gnomeExtensions.desktop-icons-ng-ding
       pkgs.gnomeExtensions.just-perfection
       pkgs.gnomeExtensions.panel-scroll
       pkgs.gnomeExtensions.rounded-corners
