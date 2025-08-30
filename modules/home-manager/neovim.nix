@@ -9,7 +9,7 @@
       inputs.nvf.packages.${pkgs.system}.default
     ];
     
-    programs.nvf = {
+    vim = {
       enable = true;
       
       settings = {
