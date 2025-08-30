@@ -11,6 +11,7 @@
       description = "ed";
       extraGroups = [ "networkmanager" "wheel" "uucp" "libvirt" ];
       packages = with pkgs; [];
+      shell = pkgs.zsh;
     };
   };
 
