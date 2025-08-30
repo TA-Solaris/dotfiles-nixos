@@ -5,7 +5,9 @@
   };
 
   config = lib.mkIf config.fonts.enable {
-    pkgs.nerd-fonts.jetbrains-mono
+    environment.systemPackages = [
+      pkgs.nerd-fonts.jetbrains-mono
+    ];
   };
 
 }
