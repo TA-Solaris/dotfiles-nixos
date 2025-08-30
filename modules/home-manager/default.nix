@@ -9,7 +9,7 @@
     ./alacritty.nix
     ./tmux.nix
     ./neovim/neovim.nix
-    ./dconf.nix
+    ./dconf-config.nix
   ];
   
   git.enable = lib.mkDefault true;
