@@ -7,7 +7,7 @@
     ./zoxide.nix
     ./shell-aliases.nix
     ./alacritty.nix
-    ./tmux/tmux.nix
+    ./tmux.nix
   ];
   
   git.enable = lib.mkDefault true;
