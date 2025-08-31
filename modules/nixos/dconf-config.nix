@@ -6,8 +6,8 @@
   };
 
   config = lib.mkIf config.dconf-config.enable {
-    services.dconf.enable = true;
-
+    dconf.enable = true;
+    
     dconf.settings = {
       "org/gnome/shell" = {
         enabled-extensions = [
