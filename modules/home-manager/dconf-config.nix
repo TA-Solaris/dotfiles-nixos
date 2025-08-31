@@ -1,48 +1,39 @@
-{ pkgs, lib, config, ... }: {
-  
+{ pkgs, lib, config, ... }:
+
+{
   options = {
-    dconf-config.enable = lib.mkEnableOption "enables dconf config";
+    dconf-config.enable = lib.mkEnableOption "Enable GNOME dconf configuration";
   };
 
   config = lib.mkIf config.dconf-config.enable {
-    dconf.enable = true;
+    programs.dconf.enable = true;
 
     dconf.settings = {
       "org/gnome/shell" = {
         enabled-extensions = [
-          "blur-my-shell@aunet.github.com"
+          "appindicatorsupport@rgcjonas.gmail.com"
+          "blur-my-shell@aunetx"
           "caffeine@patapon.info"
           "clipboard-indicator@tudmotu.com"
           "dash-to-dock@micxgx.gmail.com"
-          "desktop-icons-ng@gnome-shell-extensions.gcampax.github.com"
-          "just-perfection@just-perfection"
-          "panel-scroll@tmo.io"
-          "rounded-corners@gnome-shell-extensions.gcampax.github.com"
-          "rounded-window-corners-reborn@tudmotu.com"
-          "vitals@corecoding.com"
-          "appindicator@systemd.org"
+          "ding@rastersoft.com"
+          "just-perfection-desktop@just-perfection"
+          "panel-scroll@tmoerbeek.net"
+          "rounded-window-corners-reborn@marcinjahn.com"
+          "vitals@CoreCoding.com"
           "removable-drive-menu@gnome-shell-extensions.gcampax.github.com"
           "screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com"
-        ];
-        
-        app-menu-button-position = "left";
-        
-        # Setting the command history for the application runner.
-        command-history = [
-          "gnome-tweaks"
-          "dconf-editor"
-          "extensions-app"
         ];
       };
 
       "org/gnome/shell/extensions/dash-to-dock" = {
-        show-apps-button = false;
-        dock-position = "BOTTOM";
-        icon-size-limit = 42;
         dock-fixed = true;
+        dock-position = "BOTTOM";
         dock-autohide = false;
+        show-apps-button = false;
+        icon-size-limit = 42;
       };
-    
+
       "org/gnome/shell/extensions/rounded-window-corners-reborn" = {
         custom-radius = true;
         corner-radius = 16;
@@ -73,12 +64,6 @@
         show-hidden = true;
         view-type = "grid";
       };
-      
-      # TODO
-      #"com/github/stunkymonkey/nautilus-open-any-terminal" = {
-        #terminal = "alacritty";
-      #};
     };
   };
-
 }
