@@ -6,7 +6,7 @@
   };
 
   config = lib.mkIf config.dconf-config.enable {
-    programs.dconf.enable = true;
+    services.dconf.enable = true;
 
     dconf.settings = {
       "org/gnome/shell" = {
