@@ -36,6 +36,11 @@
       pkgs.gnomeExtensions.vitals
       pkgs.gnomeExtensions.removable-drive-menu
       pkgs.gnomeExtensions.screenshot-window-sizer
+      
+      libgtop      # Vitals (GTop introspection)
+      lm_sensors   # Vitals (temps)
+      gvfs         # removable drive menu
+      udisks2      # removable drive menu
     ];
     services.udev.packages = [ pkgs.gnome-settings-daemon ];
     

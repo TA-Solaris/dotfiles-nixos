@@ -18,8 +18,9 @@
           "dash-to-dock@micxgx.gmail.com"
           "ding@rastersoft.com"
           "just-perfection-desktop@just-perfection"
-          "panel-scroll@tmoerbeek.net"
-          "rounded-window-corners-reborn@marcinjahn.com"
+          "panel-scroll@sunwxg.github.com"
+          "rounded-window-corners@fxgn"
+          "rounded-corners@lennart-k"
           "vitals@CoreCoding.com"
           "removable-drive-menu@gnome-shell-extensions.gcampax.github.com"
           "screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com"
@@ -30,7 +31,6 @@
         dock-fixed = true;
         dock-position = "BOTTOM";
         dock-autohide = false;
-        show-apps-button = false;
         icon-size-limit = 42;
       };
 
@@ -45,7 +45,6 @@
         activities-button = false;
         app-menu = false;
         hot-corners = false;
-        show-apps-button = false;
       };
 
       "org/gnome/shell/extensions/vitals" = {
