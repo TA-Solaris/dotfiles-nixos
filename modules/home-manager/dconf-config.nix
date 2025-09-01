@@ -25,6 +25,20 @@
           pkgs.gnomeExtensions.removable-drive-menu.extensionUuid
           pkgs.gnomeExtensions.screenshot-window-sizer.extensionUuid
         ];
+        favorite-apps = [
+          "Alacritty.desktop"
+          "firefox.desktop"
+          "org.gnome.Nautilus.desktop"
+        ];
+      };
+      
+      "org/gnome/desktop/interface" = {
+        enable-hot-corners = false;
+        accent-color = "green";
+      };
+      
+      "org/gnome/mutter" = {
+        workspaces-only-on-primary = false;
       };
 
       "org/gnome/shell/extensions/dash-to-dock" = {
@@ -33,7 +47,7 @@
         show-trash = false;
         show-mounts = false;
         multi-monitor = true;
-        dock-fixed = true;
+        dock-fixed = false;
         dock-position = "BOTTOM";
         intellihide-mode = "ALL_WINDOWS";
         dash-max-icon-size = 42;
@@ -85,10 +99,46 @@
       
       "org/gnome/desktop/notifications" = {
         show-banners = false; # Do not disturb
-      }
+        show-in-lock-screen = false;
+      };
       
       "org/gnome/shell/keybindings" = {
-        show-screenshot-ui=["<Shift><Super>s"];
+        show-screenshot-ui = ["<Shift><Super>s"];
+        toggle-message-tray = [];
+      };
+      
+      "org/gnome/settings-daemon/plugins/media-keys" = {
+        www = ["<Super>b"];
+      };
+      
+      "org/gnome/desktop/wm/keybindings" = {
+        close = ["<Super>x"];
+        toggle-maximized = [];
+      };
+      
+      "org/gnome/desktop/privacy" = {
+        remember-recent-files = false;
+        remove-old-trash-files = true;
+        remove-old-temp-files = true;
+      };
+      
+      "org/gnome/settings-daemon/plugins/media-keys" = {
+        custom-keybindings = [
+          "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+          "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
+        ];
+      };
+      
+      "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+        binding = "<Super>g";
+        command = "alacritty";
+        name = "alacritty";
+      };
+    
+      "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
+        binding = "<Super>e";
+        command = "nautilus";
+        name = "nautilus";
       };
     };
   };
