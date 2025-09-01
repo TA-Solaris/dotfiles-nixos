@@ -11,19 +11,19 @@
     dconf.settings = {
       "org/gnome/shell" = {
         enabled-extensions = [
-          "appindicatorsupport@rgcjonas.gmail.com"
-          "blur-my-shell@aunetx"
-          "caffeine@patapon.info"
-          "clipboard-indicator@tudmotu.com"
-          "dash-to-dock@micxgx.gmail.com"
-          "ding@rastersoft.com"
-          "just-perfection-desktop@just-perfection"
-          "panel-scroll@sunwxg.github.com"
-          "rounded-window-corners@fxgn"
-          "rounded-corners@lennart-k"
-          "vitals@CoreCoding.com"
-          "removable-drive-menu@gnome-shell-extensions.gcampax.github.com"
-          "screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com"
+          pkgs.gnomeExtensions.appindicator.extensionUuid
+          pkgs.gnomeExtensions.blur-my-shell.extensionUuid
+          pkgs.gnomeExtensions.caffeine.extensionUuid
+          pkgs.gnomeExtensions.clipboard-indicator.extensionUuid
+          pkgs.gnomeExtensions.dash-to-dock.extensionUuid
+          pkgs.gnomeExtensions.desktop-icons-ng-ding.extensionUuid
+          pkgs.gnomeExtensions.just-perfection.extensionUuid
+          pkgs.gnomeExtensions.panel-scroll.extensionUuid
+          pkgs.gnomeExtensions.rounded-corners.extensionUuid
+          pkgs.gnomeExtensions.rounded-window-corners-reborn.extensionUuid
+          pkgs.gnomeExtensions.vitals.extensionUuid
+          pkgs.gnomeExtensions.removable-drive-menu.extensionUuid
+          pkgs.gnomeExtensions.screenshot-window-sizer.extensionUuid
         ];
       };
 
@@ -62,6 +62,10 @@
         location-mode = "path-bar";
         show-hidden = true;
         view-type = "grid";
+      };
+      
+      "org/gnome/shell/keybindings" = {
+        show-screenshot-ui=["<Shift><Super>s"];
       };
     };
   };

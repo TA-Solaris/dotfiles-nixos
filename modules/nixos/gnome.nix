@@ -37,9 +37,6 @@
       pkgs.gnomeExtensions.removable-drive-menu
       pkgs.gnomeExtensions.screenshot-window-sizer
     ];
-    services.gvfs.enable = true;       # removable drive menu
-    services.udisks2.enable = true;    # removable drive menu
-    services.hardware.sensors.enable = true; # Vitals (temps)
     services.udev.packages = [ pkgs.gnome-settings-daemon ];
     
     # Gnome games
