@@ -9,7 +9,8 @@
     ./alacritty.nix
     ./tmux.nix
     ./neovim/neovim.nix
-    ./dconf-config.nix
+    ./gnome/dconf-config.nix
+    ./gnome/gnome-config.nix
   ];
   
   git.enable = lib.mkDefault true;
@@ -20,6 +21,7 @@
   alacritty.enable = lib.mkDefault true;
   tmux.enable = lib.mkDefault true;
   neovim.enable = lib.mkDefault true;
-  dconf-config.enable = lib.mkDefault true; 
+  dconf-config.enable = lib.mkDefault true;
+  gnome-config.enable = lib.mkDefault true; 
 
 }
