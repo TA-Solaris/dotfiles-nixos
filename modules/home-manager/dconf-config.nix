@@ -28,34 +28,32 @@
       };
 
       "org/gnome/shell/extensions/dash-to-dock" = {
+        disable-overview-on-startup = true;
+        hot-keys = false;
+        show-trash = false;
+        show-mounts = false;
+        multi-monitor = true;
         dock-fixed = true;
         dock-position = "BOTTOM";
-        dock-autohide = false;
-        icon-size-limit = 42;
+        intellihide-mode = "ALL_WINDOWS";
+        dash-max-icon-size = 42;
       };
 
       "org/gnome/shell/extensions/rounded-window-corners-reborn" = {
-        custom-radius = true;
-        corner-radius = 16;
-        apply-to-maximized-windows = false;
+        
       };
 
       "org/gnome/shell/extensions/just-perfection" = {
-        accessibility = false;
-        activities-button = false;
-        app-menu = false;
-        hot-corners = false;
+        
       };
 
       "org/gnome/shell/extensions/vitals" = {
-        show-temperature = true;
-        show-voltage = false;
-        show-fans = false;
+        
       };
 
       "org/gtk/settings/file-chooser" = {
         location-mode = "path-bar";
-        show-hidden = false;
+        show-hidden = true;
       };
 
       "org/gtk/gtk4/settings/file-chooser" = {
