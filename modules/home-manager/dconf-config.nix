@@ -38,17 +38,38 @@
         intellihide-mode = "ALL_WINDOWS";
         dash-max-icon-size = 42;
       };
-
-      "org/gnome/shell/extensions/rounded-window-corners-reborn" = {
-        
+      
+      "org/gnome/shell/extensions/caffeine" = {
+        show-notifications = false;
+      };
+      
+      "org/gnome/shell/extensions/clipboard-indicator" = {
+        paste-button = false;
+        notify-on-cycle = false;
+        confirm-clear = false;
+        enable-keybindings = false;
+      };
+      
+      "org/gnome/shell/extensions/panelScroll" = {
+        right = "workspace";
+        left = "workspace";
       };
 
       "org/gnome/shell/extensions/just-perfection" = {
-        
+        support-notifier-type = 0;
+        accessibility-menu = false;
+        quick-settings-dark-mode = false;
+        panel-notification-icon = false;
+        workspace-wrap-around = true;
+        startup-status = 0;
+        animation = 4;
       };
 
       "org/gnome/shell/extensions/vitals" = {
-        
+        position-in-panel = 0;
+        show-battery = true;
+        icon-style = 1;
+        hot-sensors = "['_processor_usage_', '_memory_usage_', '_system_uptime_', '__network-rx_max__', '__network-tx_max__']";
       };
 
       "org/gtk/settings/file-chooser" = {
@@ -61,6 +82,10 @@
         show-hidden = true;
         view-type = "grid";
       };
+      
+      "org/gnome/desktop/notifications" = {
+        show-banners = false; # Do not disturb
+      }
       
       "org/gnome/shell/keybindings" = {
         show-screenshot-ui=["<Shift><Super>s"];
