@@ -24,6 +24,7 @@
           pkgs.gnomeExtensions.vitals.extensionUuid
           pkgs.gnomeExtensions.removable-drive-menu.extensionUuid
           pkgs.gnomeExtensions.screenshot-window-sizer.extensionUuid
+          pkgs.gnomeExtensions.user-themes.extensionUuid
         ];
         favorite-apps = [
           "Alacritty.desktop"
@@ -139,6 +140,24 @@
         binding = "<Super>e";
         command = "nautilus";
         name = "nautilus";
+      };
+      
+      "org/gnome/tweaks" = {
+        show-extensions-notice = false;
+      };
+      
+      "org/gnome/desktop/input-sources" = {
+        xkb-options = ["caps:escape_shifted_capslock"];
+      };
+      
+      "org/gnome/desktop/wm/preferences" = {
+        button-layout = "appmenu:minimize,close";
+        resize-with-right-button = true;
+      };
+      
+      "org/gnome/desktop/background" = {
+        picture-uri = "file:///home/ed/.dotfiles/modules/home-manager/gnome/.wallpaper/mojave.xml";
+        picture-uri-dark = "file:///home/ed/.dotfiles/modules/home-manager/gnome/.wallpaper/mojave.xml";
       };
     };
   };
