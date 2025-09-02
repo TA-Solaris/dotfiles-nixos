@@ -23,6 +23,8 @@
     
     # Systray icons and extensions
     environment.systemPackages = [
+      pkgs.gnome-tweaks
+
       pkgs.gnomeExtensions.appindicator
       pkgs.gnomeExtensions.blur-my-shell
       pkgs.gnomeExtensions.caffeine
@@ -36,6 +38,7 @@
       pkgs.gnomeExtensions.vitals
       pkgs.gnomeExtensions.removable-drive-menu
       pkgs.gnomeExtensions.screenshot-window-sizer
+      pkgs.gnomeExtensions.user-themes
     ];
     services.udev.packages = [ pkgs.gnome-settings-daemon ];
     
