@@ -36,6 +36,8 @@
       "org/gnome/desktop/interface" = {
         enable-hot-corners = false;
         accent-color = "green";
+        clock-show-weekday = true;
+        clock-show-seconds = true;
       };
       
       "org/gnome/mutter" = {
