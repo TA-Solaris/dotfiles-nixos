@@ -161,6 +161,10 @@
         picture-uri = "file:///home/ed/.dotfiles/modules/home-manager/gnome/.wallpaper/mojave.xml";
         picture-uri-dark = "file:///home/ed/.dotfiles/modules/home-manager/gnome/.wallpaper/mojave.xml";
       };
+      
+      "org/gnome/TextEditor" = {
+        restore-session = false;
+      };
     };
   };
 }

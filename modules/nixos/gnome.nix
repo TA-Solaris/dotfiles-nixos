@@ -47,7 +47,7 @@
     
     # Use alacritty
     programs.nautilus-open-any-terminal = {
-      enabled = true;
+      enable = true;
       terminal = "alacritty";
     };
   };
