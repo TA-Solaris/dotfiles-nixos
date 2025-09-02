@@ -6,6 +6,7 @@
   };
 
   config = lib.mkIf config.gnome-config.enable {
+    # PFP
     home.file.".face" = {
       source = ./.face.png;
     };

@@ -44,6 +44,12 @@
     
     # Gnome games
     services.gnome.games.enable = true;
+    
+    # Use alacritty
+    programs.nautilus-open-any-terminal = {
+      enabled = true;
+      terminal = "alacritty";
+    };
   };
 
 }
