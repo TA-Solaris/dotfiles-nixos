@@ -40,6 +40,7 @@
         clock-show-seconds = true;
         cursor-theme = "Nordzy-cursors";
         icon-theme = "Flatery-Teal";
+        gtk-theme = "Orchis-Green-Light";
       };
       
       "org/gnome/mutter" = {
@@ -54,8 +55,10 @@
         multi-monitor = true;
         dock-fixed = false;
         dock-position = "BOTTOM";
-        intellihide-mode = "ALL_WINDOWS";
+        intellihide = false;
         dash-max-icon-size = 42;
+        custom-theme-shrink = true;
+        apply-custom-theme = true;
       };
       
       "org/gnome/shell/extensions/caffeine" = {
@@ -92,7 +95,15 @@
         position-in-panel = 0;
         show-battery = true;
         icon-style = 1;
-        hot-sensors = "['_processor_usage_', '_memory_usage_', '_system_uptime_', '__network-rx_max__', '__network-tx_max__']";
+        hot-sensors = [
+          "_processor_usage_"
+          "_memory_usage_"
+          "__temperature_avg__"
+          "_system_uptime_"
+          "_battery_time_left_"
+          "__network-rx_max__"
+          "__network-tx_max__"
+        ];
       };
 
       "org/gtk/settings/file-chooser" = {
