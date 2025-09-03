@@ -39,6 +39,7 @@
         clock-show-weekday = true;
         clock-show-seconds = true;
         cursor-theme = "Nordzy-cursors";
+        icon-theme = "Flatery-Teal";
       };
       
       "org/gnome/mutter" = {
@@ -83,10 +84,8 @@
         animation = 4;
       };
       
-      "org/gnome/shell/extensions/blur-my-shell" = {
-        panel = {
-          blur = false;
-        };
+      "org/gnome/shell/extensions/blur-my-shell/panel" = {
+        blur = false;
       };
 
       "org/gnome/shell/extensions/vitals" = {
