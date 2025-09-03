@@ -21,9 +21,12 @@
     # Removed packages
     environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs gnome-console geary epiphany yelp ];
     
-    # Systray icons and extensions
+    # Systray icons, extensions, and theming
     environment.systemPackages = [
       pkgs.gnome-tweaks
+      
+      pkgs.nordzy-cursor-theme
+      pkgs.orchis-theme
 
       pkgs.gnomeExtensions.appindicator
       pkgs.gnomeExtensions.blur-my-shell

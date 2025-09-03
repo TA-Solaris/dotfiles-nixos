@@ -38,6 +38,7 @@
         accent-color = "green";
         clock-show-weekday = true;
         clock-show-seconds = true;
+        cursor-theme = "Nordzy-cursors";
       };
       
       "org/gnome/mutter" = {
@@ -80,6 +81,12 @@
         workspace-wrap-around = true;
         startup-status = 0;
         animation = 4;
+      };
+      
+      "org/gnome/shell/extensions/blur-my-shell" = {
+        panel = {
+          blur = false;
+        };
       };
 
       "org/gnome/shell/extensions/vitals" = {
@@ -164,6 +171,10 @@
       
       "org/gnome/TextEditor" = {
         restore-session = false;
+      };
+      
+      "org/gnome/shell/extensions/user-theme" = {
+        name = "Orchis-Green-Light";
       };
     };
   };
