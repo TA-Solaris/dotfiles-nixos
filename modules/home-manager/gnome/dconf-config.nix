@@ -116,7 +116,7 @@
       
       "org/gnome/desktop/wm/keybindings" = {
         close = ["<Super>x"];
-        toggle-maximized = [];
+        toggle-maximized = ["<Super>m"];
       };
       
       "org/gnome/desktop/privacy" = {
