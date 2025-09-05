@@ -45,7 +45,7 @@
     ./dconf-editor.nix
     ./discord.nix
     ./postman.nix
-    ./whatsapp.nix
+    #./whatsapp.nix
     ./eyedropper.nix
     ./curtail.nix
     ./jellyfin.nix
@@ -54,7 +54,7 @@
     ./sigil.nix
     ./caprine.nix
     ./spotify.nix
-    ./metadata-cleaner.nix
+    #./metadata-cleaner.nix
     ./dbeaver.nix
     ./paper-clip.nix
     ./proton.nix
@@ -119,7 +119,7 @@
   dconf-editor.enable = lib.mkDefault true;
   discord.enable = lib.mkDefault true;
   postman.enable = lib.mkDefault true;
-  whatsapp.enable = lib.mkDefault true;
+  #whatsapp.enable = lib.mkDefault true;
   eyedropper.enable = lib.mkDefault true;
   curtail.enable = lib.mkDefault true;
   jellyfin.enable = lib.mkDefault true;
@@ -128,7 +128,7 @@
   sigil.enable = lib.mkDefault true;
   caprine.enable = lib.mkDefault true;
   spotify.enable = lib.mkDefault true;
-  metadata-cleaner.enable = lib.mkDefault true;
+  #metadata-cleaner.enable = lib.mkDefault true;
   dbeaver.enable = lib.mkDefault true;
   paper-clip.enable = lib.mkDefault true;
   proton.enable = lib.mkDefault true;
