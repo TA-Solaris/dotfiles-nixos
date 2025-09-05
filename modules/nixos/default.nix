@@ -73,6 +73,8 @@
     ./ffmpeg.nix
     ./gamemode.nix
     ./steam.nix
+    ./opengl.nix
+    ./vulkan.nix
   ];
   
   users.ed.enable = lib.mkDefault true;
@@ -147,5 +149,7 @@
   ffmpeg.enable = lib.mkDefault true;
   gamemode.enable = lib.mkDefault true;
   steam.enable = lib.mkDefault true;
+  opengl.enable = lib.mkDefault true;
+  vulkan.enable = lib.mkDefault true;
   
 }
