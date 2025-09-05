@@ -71,6 +71,7 @@
     ./vlc.nix
     ./retroarch.nix
     ./ffmpeg.nix
+    ./gamemode.nix
   ];
   
   users.ed.enable = lib.mkDefault true;
@@ -143,5 +144,6 @@
   vlc.enable = lib.mkDefault true;
   retroarch.enable = lib.mkDefault true;
   ffmpeg.enable = lib.mkDefault true;
+  gamemode.enable = lib.mkDefault true;
   
 }
