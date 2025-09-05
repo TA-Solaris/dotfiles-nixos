@@ -9,7 +9,7 @@
     users.users.ed = {
       isNormalUser = true;
       description = "ed";
-      extraGroups = [ "networkmanager" "wheel" "uucp" "libvirt" ];
+      extraGroups = [ "networkmanager" "wheel" "uucp" "libvirt" "docker" ];
       packages = with pkgs; [];
       shell = pkgs.zsh;
     };

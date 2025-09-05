@@ -24,6 +24,7 @@
     # Systray icons, extensions, and theming
     environment.systemPackages = [
       pkgs.gnome-tweaks
+      pkgs.gnome-firmware
       
       pkgs.nordzy-cursor-theme
       pkgs.orchis-theme
