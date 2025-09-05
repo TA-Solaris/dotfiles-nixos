@@ -11,7 +11,6 @@
     ./neovim/neovim.nix
     ./gnome/dconf-config.nix
     ./gnome/gnome-config.nix
-    ./steam.nix
   ];
   
   git.enable = lib.mkDefault true;
@@ -24,6 +23,5 @@
   neovim.enable = lib.mkDefault true;
   dconf-config.enable = lib.mkDefault true;
   gnome-config.enable = lib.mkDefault true;
-  steam.enable = lib.mkDefault true;
 
 }
