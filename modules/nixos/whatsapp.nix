@@ -6,7 +6,8 @@
 
   config = lib.mkIf config.whatsapp.enable {
     environment.systemPackages = [
-      pkgs.whatsapp-electron
+      #pkgs.whatsapp-electron
+      pkgs.whatsie
     ];
   };
 
