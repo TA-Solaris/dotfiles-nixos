@@ -45,7 +45,7 @@
     ./dconf-editor.nix
     ./discord.nix
     ./postman.nix
-    #./whatsapp.nix
+    ./whatsapp.nix
     ./eyedropper.nix
     ./curtail.nix
     ./jellyfin.nix
@@ -121,7 +121,7 @@
   dconf-editor.enable = lib.mkDefault true;
   discord.enable = lib.mkDefault true;
   postman.enable = lib.mkDefault true;
-  #whatsapp.enable = lib.mkDefault true;
+  whatsapp.enable = lib.mkDefault true;
   eyedropper.enable = lib.mkDefault true;
   curtail.enable = lib.mkDefault true;
   jellyfin.enable = lib.mkDefault true;
