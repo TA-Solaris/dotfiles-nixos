@@ -22,5 +22,7 @@ in
     home.file.".icons" = {
       source = "${flatery}";
     };
+    
+    services.gpg-agent.pinentry.program = "pinentry-gnome3";
   };
 }
