@@ -1,0 +1,13 @@
+{ pkgs, lib, config, ... }: {
+
+  options = {
+    vscode.enable = lib.mkEnableOption "enable vscode";
+  };
+
+  config = lib.mkIf config.vscode.enable {
+    environment.systemPackages = [
+      pkgs.vscode
+    ];
+  };
+
+}

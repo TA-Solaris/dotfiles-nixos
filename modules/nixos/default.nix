@@ -75,6 +75,14 @@
     ./steam.nix
     ./opengl.nix
     ./vulkan.nix
+    ./video-downloader.nix
+    ./syncthing.nix
+    ./fragments.nix
+    ./prismlauncher.nix
+    ./qtpass.nix
+    ./vscode.nix
+    ./obsidian.nix
+    ./fastfetch.nix
   ];
   
   users.ed.enable = lib.mkDefault true;
@@ -151,5 +159,13 @@
   steam.enable = lib.mkDefault true;
   opengl.enable = lib.mkDefault true;
   vulkan.enable = lib.mkDefault true;
+  video-downloader.enable = lib.mkDefault true;
+  syncthing.enable = lib.mkDefault true;
+  fragments.enable = lib.mkDefault true;
+  prismlauncher.enable = lib.mkDefault true;
+  qtpass.enable = lib.mkDefault true;
+  vscode.enable = lib.mkDefault true;
+  obsidian.enable = lib.mkDefault true;
+  fastfetch.enable = lib.mkDefault true;
   
 }

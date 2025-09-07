@@ -14,15 +14,10 @@ sudo nixos-rebuild switch --flake /home/ed/.dotfiles#[configuration]
 
 ## TODO
 
-videodownlaoder
-
-firefox
-code (Code - OSS)
-fastfetch
-obsidian
-qtpass
-syncthing
-
-fragments
-prism launcher
+- Firefox setup
+- Fix metacleaner build
+- Set system default apps
+- Set folder bookmarks
+- Set system font
+- (Potential) Store app menu dconf
 
