@@ -14,7 +14,6 @@ sudo nixos-rebuild switch --flake /home/ed/.dotfiles#[configuration]
 
 ## TODO
 
-- Firefox setup
 - Fix metacleaner build
 - Set system default apps
 - Set folder bookmarks
