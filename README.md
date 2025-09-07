@@ -15,7 +15,7 @@ sudo nixos-rebuild switch --flake /home/ed/.dotfiles#[configuration]
 ## TODO
 
 - Fix metacleaner build
-- Set folder bookmarks
-- Set system font
 - (Potential) Store app menu dconf
+- (Future) Set Nautilus folder bookmarks/stars
+- (Future) Mimetype default apps
 
