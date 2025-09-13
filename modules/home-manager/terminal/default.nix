@@ -11,7 +11,6 @@
     ./tmux-config.nix
     ./zoxide-config.nix
     ./neovim/neovim-config.nix
-    ./neovim/nvf-config.nix
     ./zsh/zsh-config.nix
   ];
 
@@ -22,7 +21,6 @@
     tmux-config.enable = lib.mkDefault true;
     zoxide-config.enable = lib.mkDefault true;
     neovim-config.enable = lib.mkDefault true;
-    nvf-config.enable = lib.mkDefault true;
     zsh-config.enable = lib.mkDefault true;
   };
 

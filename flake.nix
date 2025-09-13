@@ -16,7 +16,7 @@
     packages."x86_64-linux".default = 
       (nvf.lib.neovimConfiguration {
         pkgs = nixpkgs.legacyPackages."x86_64-linux";
-        modules = [ "./modules/home-manager/neovim/nvf-config.nix" ];
+        modules = [ "./modules/home-manager/terminal/neovim/nvf-config.nix" ];
       }).neovim;
   
     nixosConfigurations = {
