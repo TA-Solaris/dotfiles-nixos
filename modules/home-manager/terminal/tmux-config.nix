@@ -1,10 +1,10 @@
 { pkgs, lib, config, ... }: {
   
   options = {
-    tmux.enable = lib.mkEnableOption "enables tmux";
+    tmux-config.enable = lib.mkEnableOption "enables tmux config";
   };
 
-  config = lib.mkIf config.tmux.enable {
+  config = lib.mkIf config.tmux-config.enable {
     programs.tmux = {
       enable = true;
       terminal = "tmux-256color";

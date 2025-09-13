@@ -1,10 +1,10 @@
 { pkgs, lib, config, ... }: {
   
   options = {
-    atuin.enable = lib.mkEnableOption "enables atuin";
+    atuin-config.enable = lib.mkEnableOption "enables atuin config";
   };
 
-  config = lib.mkIf config.atuin.enable {
+  config = lib.mkIf config.atuin-config.enable {
     programs.atuin = {
       enable = true;
       enableBashIntegration = true;

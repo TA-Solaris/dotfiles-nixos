@@ -1,10 +1,10 @@
 { pkgs, lib, config, ... }: {
   
   options = {
-    git.enable = lib.mkEnableOption "enables git";
+    git-config.enable = lib.mkEnableOption "enables git config";
   };
 
-  config = lib.mkIf config.git.enable {
+  config = lib.mkIf config.git-config.enable {
     programs.git = {
       enable = true;
       userName = "Edward Potter";

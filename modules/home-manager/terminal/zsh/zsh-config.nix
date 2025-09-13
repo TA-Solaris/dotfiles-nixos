@@ -1,10 +1,10 @@
 { pkgs, lib, config, ... }: {
   
   options = {
-    zsh.enable = lib.mkEnableOption "enables zsh";
+    zsh-config.enable = lib.mkEnableOption "enables zsh config";
   };
 
-  config = lib.mkIf config.zsh.enable {
+  config = lib.mkIf config.zsh-config.enable {
     programs.zsh = {
       enable = true;
       enableCompletion = true;

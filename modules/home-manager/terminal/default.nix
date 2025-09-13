@@ -5,25 +5,25 @@
   };
   
   imports = [
-    ./alacritty.nix
-    ./atuin.nix
+    ./alacritty-config.nix
+    ./atuin-config.nix
     ./shell-aliases.nix
-    ./tmux.nix
-    ./zoxide.nix
-    ./neovim/neovim.nix
+    ./tmux-config.nix
+    ./zoxide-config.nix
+    ./neovim/neovim-config.nix
     ./neovim/nvf-config.nix
-    ./zsh/zsh.nix
+    ./zsh/zsh-config.nix
   ];
 
   config = lib.mkIf config.home-manager-terminal.enable {
-    alacritty.enable = lib.mkDefault true;
-    atuin.enable = lib.mkDefault true;
+    alacritty-config.enable = lib.mkDefault true;
+    atuin-config.enable = lib.mkDefault true;
     shell-aliases.enable = lib.mkDefault true;
-    tmux.enable = lib.mkDefault true;
-    zoxide.enable = lib.mkDefault true;
-    neovim.enable = lib.mkDefault true;
+    tmux-config.enable = lib.mkDefault true;
+    zoxide-config.enable = lib.mkDefault true;
+    neovim-config.enable = lib.mkDefault true;
     nvf-config.enable = lib.mkDefault true;
-    zsh.enable = lib.mkDefault true;
+    zsh-config.enable = lib.mkDefault true;
   };
 
 }

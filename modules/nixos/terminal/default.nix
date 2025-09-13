@@ -5,6 +5,8 @@
   };
   
   imports = [
+    ./alacritty.nix
+    ./atuin.nix
     ./btop.nix
     ./cmatrix.nix
     ./cowsay.nix
@@ -15,17 +17,23 @@
     ./lazydocker.nix
     ./lazygit.nix
     ./lolcat.nix
+    ./neovim.nix
     ./nmap.nix
     ./sl.nix
+    ./tmux.nix
     ./traceroute.nix
     ./net-tools.nix
     ./wget.nix
     ./yt-dlp.nix
     ./ffmpeg.nix
     ./fastfetch.nix
+    ./zoxide.nix
+    ./zsh.nix
   ];
 
   config = lib.mkIf config.nixos-terminal.enable {
+    alacritty.enable = lib.mkDefault true;
+    atuin.enable = lib.mkDefault true;
     btop.enable = lib.mkDefault true;
     cmatrix.enable = lib.mkDefault true;
     cowsay.enable = lib.mkDefault true;
@@ -36,14 +44,18 @@
     lazydocker.enable = lib.mkDefault true;
     lazygit.enable = lib.mkDefault true;
     lolcat.enable = lib.mkDefault true;
+    neovim.enable = lib.mkDefault true;
     nmap.enable = lib.mkDefault true;
     sl.enable = lib.mkDefault true;
+    tmux.enable = lib.mkDefault true;
     traceroute.enable = lib.mkDefault true;
     net-tools.enable = lib.mkDefault true;
     wget.enable = lib.mkDefault true;
     yt-dlp.enable = lib.mkDefault true;
     ffmpeg.enable = lib.mkDefault true;
     fastfetch.enable = lib.mkDefault true;
+    zoxide.enable = lib.mkDefault true;
+    zsh.enable = lib.mkDefault true;
   };
 
 }

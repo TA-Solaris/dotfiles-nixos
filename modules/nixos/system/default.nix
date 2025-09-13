@@ -7,6 +7,7 @@
   imports = [
     ./fonts.nix
     ./gamemode.nix
+    ./git.nix
     ./gnome.nix
     ./network-manager.nix
     ./opengl.nix
@@ -21,6 +22,7 @@
   config = lib.mkIf config.nixos-system.enable {
     fonts.enable = lib.mkDefault true;
     gamemode.enable = lib.mkDefault true;
+    git.enable = lib.mkDefault true;
     gnome.enable = lib.mkDefault true;
     network-manager.enable = lib.mkDefault true;
     opengl.enable = lib.mkDefault true;

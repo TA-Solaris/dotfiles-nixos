@@ -5,11 +5,11 @@
   };
   
   imports = [
-    ./firefox.nix
+    ./firefox-config.nix
   ];
 
   config = lib.mkIf config.home-manager-gui-apps.enable {
-    firefox.enable = lib.mkDefault true;
+    firefox-config.enable = lib.mkDefault true;
   };
 
 }

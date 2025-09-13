@@ -28,10 +28,10 @@
 in {
   
   options = {
-    firefox.enable = lib.mkEnableOption "enables firefox";
+    firefox-config.enable = lib.mkEnableOption "enables firefox config";
   };
 
-  config = lib.mkIf config.firefox.enable {
+  config = lib.mkIf config.firefox-config.enable {
     programs.firefox = {
       enable = true;
       profiles.default = {

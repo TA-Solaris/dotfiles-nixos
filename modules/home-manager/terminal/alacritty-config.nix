@@ -1,10 +1,10 @@
 { pkgs, lib, config, ... }: {
   
   options = {
-    alacritty.enable = lib.mkEnableOption "enables alacritty";
+    alacritty-config.enable = lib.mkEnableOption "enables alacritty config";
   };
 
-  config = lib.mkIf config.alacritty.enable {
+  config = lib.mkIf config.alacritty-config.enable {
     programs.alacritty = {
       enable = true;
 

@@ -1,10 +1,10 @@
 { pkgs, lib, config, inputs, ... }: {
   
   options = {
-    neovim.enable = lib.mkEnableOption "enables neovim";
+    neovim-config.enable = lib.mkEnableOption "enables neovim config";
   };
 
-  config = lib.mkIf config.neovim.enable {
+  config = lib.mkIf config.neovim-config.enable {
     home.packages = [
       inputs.nvf.packages.${pkgs.system}.default
     ];
