@@ -178,8 +178,8 @@
       };
       
       "org/gnome/desktop/background" = {
-        picture-uri = "file:///home/ed/.dotfiles/modules/home-manager/gnome/.wallpaper/mojave.xml";
-        picture-uri-dark = "file:///home/ed/.dotfiles/modules/home-manager/gnome/.wallpaper/mojave.xml";
+        picture-uri = "file:///home/ed/.dotfiles/modules/home-manager/system/gnome/.wallpaper/mojave.xml";
+        picture-uri-dark = "file:///home/ed/.dotfiles/modules/home-manager/system/gnome/.wallpaper/mojave.xml";
       };
       
       "org/gnome/TextEditor" = {
