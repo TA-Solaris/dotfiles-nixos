@@ -5,7 +5,7 @@
   };
   
   imports = [
-    ./users/ed.nix
+    ./ed.nix
   ];
 
   config = lib.mkIf config.nixos-users.enable {

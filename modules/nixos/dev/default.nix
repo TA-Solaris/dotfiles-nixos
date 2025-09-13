@@ -36,7 +36,6 @@
     cursor.enable = lib.mkDefault true;
     dart.enable = lib.mkDefault true;
     docker.enable = lib.mkDefault true;
-    dust.enable = lib.mkDefault true;
     chromium.enable = lib.mkDefault true;
     jdk.enable = lib.mkDefault true;
     nodejs.enable = lib.mkDefault true;
