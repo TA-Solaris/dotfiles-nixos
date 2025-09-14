@@ -16,4 +16,15 @@
   targets.darwin = {
     currentHostDefaults = "NSGlobalDomain";
   };
+  
+  # InCyan Git
+  programs.git = {
+    enable = true;
+    userName = "Edward Potter";
+    userEmail = "ep@incyan.com";
+      
+    extraConfig = {
+      pull.rebase = true;
+    };
+  };
 }
