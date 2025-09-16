@@ -30,6 +30,9 @@
   # Locale
   i18n.defaultLocale = "en_GB.UTF-8";
 
+  # Apple Silicon
+  nixpkgs.hostPlatform = "aarch64-darwin";
+
   # Enable services that work on macOS
   services.nix-daemon.enable = true;
 }
