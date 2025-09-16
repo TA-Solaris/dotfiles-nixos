@@ -1,14 +1,12 @@
 { pkgs, lib, ... } : {
   
   imports = [
-    ./dev/default.nix
-    ./terminal/default.nix
-    ./system/default.nix
+    ./dev/darwin.nix
+    ./terminal/darwin.nix
+    ./system/darwin.nix
   ];
   
   #nixos-dev.enable = lib.mkDefault true; # TODO
   #nixos-terminal.enable = lib.mkDefault true;
-  fonts.enable = lib.mkDefault true;
-  git.enable = lib.mkDefault true;
-  
+  nixos-system.enable = lib.mkDefault true;
 }

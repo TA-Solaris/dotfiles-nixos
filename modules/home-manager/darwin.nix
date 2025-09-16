@@ -1,7 +1,7 @@
 { pkgs, lib, ... } : {
   
   imports = [
-    ./terminal/default.nix
+    ./terminal/darwin.nix
   ];
   
   #home-manager-terminal.enable = lib.mkDefault true;
