@@ -13,7 +13,7 @@ git clone git@github.com:TA-Solaris/dotfiles-nixos.git ~/.dotfiles
 **Darwin**
 ```bash
 sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install)
-nix run nix-darwin --extra-experimental-features nix-command --extra-experimental-features flakes -- switch --flake ~/.dotfiles#[configuration]
+nix run nix-darwin --use-remote-sudo --extra-experimental-features nix-command --extra-experimental-features flakes -- switch --flake ~/.dotfiles#[configuration]
 ```
 
 ### Rebuild
@@ -25,7 +25,7 @@ sudo nixos-rebuild switch --flake ~/.dotfiles#[configuration]
 
 **Darwin**
 ```bash
-darwin-rebuild switch --flake ~/.dotfiles#[configuration]
+darwin-rebuild --use-remote-sudo switch --flake ~/.dotfiles#[configuration]
 ```
 
 ## TODO
