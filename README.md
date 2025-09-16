@@ -5,7 +5,7 @@ These are my NixOS dotfiles.
 ## Commands
 
 ```
-git clone git@github.com:TA-Solaris/dotfiles-nixos.git
+git clone git@github.com:TA-Solaris/dotfiles-nixos.git ~/.dotfiles
 ```
 
 ```
