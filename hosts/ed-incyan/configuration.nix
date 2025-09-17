@@ -11,12 +11,12 @@
   networking.hostName = "ed-incyan";
 
   # Home Manager configuration
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users = {
-      "edwardpotter" = import ./home.nix;
-    };
-  };
+  #home-manager = {
+  #  extraSpecialArgs = { inherit inputs; };
+  #  users = {
+  #    "edwardpotter" = import ./home.nix;
+  #  };
+  #};
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -32,7 +32,4 @@
 
   # Apple Silicon
   nixpkgs.hostPlatform = "aarch64-darwin";
-
-  # Enable services that work on macOS
-  services.nix-daemon.enable = true;
 }
