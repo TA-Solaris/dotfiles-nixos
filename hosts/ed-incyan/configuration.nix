@@ -2,7 +2,7 @@
 
 {
   imports = [
-    #../../modules/nixos/darwin.nix
+    ../../modules/nixos/darwin.nix
   ];
 
   # Set Git commit hash for darwin-version.
@@ -11,7 +11,7 @@
 
   # Hostname
   networking.hostName = "ed-incyan";
-
+  
   # Home Manager configuration
   #home-manager = {
   #  extraSpecialArgs = { inherit inputs; };

@@ -13,9 +13,9 @@
   };
 
   # macOS-specific settings
-  targets.darwin = {
-    currentHostDefaults = "NSGlobalDomain";
-  };
+  #targets.darwin = {
+  #  currentHostDefaults = "NSGlobalDomain";
+  #};
   
   # InCyan Git
   programs.git = {
