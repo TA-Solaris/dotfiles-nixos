@@ -1,11 +1,13 @@
-{ config, pkgs, inputs, ... }:
+{ self, config, pkgs, inputs, ... }:
 
 {
   imports = [
-    ../../modules/nixos/darwin.nix
+    #../../modules/nixos/darwin.nix
   ];
 
-  system.stateVersion = 4; # Darwin version
+  # Set Git commit hash for darwin-version.
+  system.configurationRevision = self.rev or self.dirtyRev or null;
+  system.stateVersion = 6; # Darwin version
 
   # Hostname
   networking.hostName = "ed-incyan";

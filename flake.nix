@@ -1,62 +1,59 @@
 {
-  description = "Nixos config flake";
+  description = "NixOS + Darwin flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
     nix-darwin = {
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
     nvf.url = "github:notashelf/nvf";
   };
 
-  outputs = { self, nixpkgs, nvf, nix-darwin, ... }@inputs: {
-    
-    # NVF
-    packages = {
-      x86_64-linux.default =
-        (nvf.lib.neovimConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          modules = [ ./modules/home-manager/terminal/neovim/nvf-config.nix ];
-        }).neovim;
-
-      x86_64-darwin.default =
-        (nvf.lib.neovimConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-darwin;
-          modules = [ ./modules/home-manager/terminal/neovim/nvf-config.nix ];
-        }).neovim;
-
-      aarch64-darwin.default =
-        (nvf.lib.neovimConfiguration {
-          pkgs = nixpkgs.legacyPackages.aarch64-darwin;
-          modules = [ ./modules/home-manager/terminal/neovim/nvf-config.nix ];
-        }).neovim;
-    };
-     
+  outputs = { self, nixpkgs, home-manager, nix-darwin, nvf, ... }@inputs: {
     nixosConfigurations = {
       ed-nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
+        specialArgs = { inherit inputs; };
         modules = [
           ./hosts/ed-nixos/configuration.nix
-          inputs.home-manager.nixosModules.default
+          home-manager.nixosModules.default
         ];
       };
     };
 
     darwinConfigurations = {
       ed-incyan = nix-darwin.lib.darwinSystem {
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs self; };
         modules = [
           ./hosts/ed-incyan/configuration.nix
-          inputs.home-manager.darwinModules.default
+          home-manager.darwinModules.default
         ];
+      };
+    };
+
+    packages = {
+      x86_64-linux = let
+        neovimPkg = (nvf.lib.neovimConfiguration {
+          inherit nixpkgs;
+          modules = [ ./modules/home-manager/terminal/neovim/nvf-config.nix ];
+        }).neovim;
+      in {
+        neovim = neovimPkg;
+        default = neovimPkg;
+      };
+
+      aarch64-darwin = let
+        neovimPkg = (nvf.lib.neovimConfiguration {
+          inherit nixpkgs;
+          modules = [ ./modules/home-manager/terminal/neovim/nvf-config.nix ];
+        }).neovim;
+      in {
+        neovim = neovimPkg;
+        default = neovimPkg;
       };
     };
   };
