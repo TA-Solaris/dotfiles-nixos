@@ -14,11 +14,13 @@
     ./fortune.nix
     ./fzf.nix
     ./gallery-dl.nix
+    ./jq.nix
     ./lazydocker.nix
     ./lazygit.nix
     ./lolcat.nix
     ./neovim.nix
     ./nmap.nix
+    ./ranger.nix
     ./sl.nix
     ./tmux.nix
     ./net-tools.nix
@@ -40,11 +42,13 @@
     fortune.enable = lib.mkDefault true;
     fzf.enable = lib.mkDefault true;
     gallery-dl.enable = lib.mkDefault true;
+    jq.enable = lib.mkDefault true;
     lazydocker.enable = lib.mkDefault true;
     lazygit.enable = lib.mkDefault true;
     lolcat.enable = lib.mkDefault true;
     neovim.enable = lib.mkDefault true;
     nmap.enable = lib.mkDefault true;
+    ranger.enable = lib.mkDefault true;
     sl.enable = lib.mkDefault true;
     tmux.enable = lib.mkDefault true;
     net-tools.enable = lib.mkDefault true;
