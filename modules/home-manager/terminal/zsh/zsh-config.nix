@@ -35,14 +35,21 @@
       
       initContent = ''
 	if command -v tmux >/dev/null; then
-	  if [ -z "$TMUX" ]; then
-	    if [ "$PWD" != "$HOME" ]; then
-              tmux new -c "$PWD"
-	    else
-              tmux attach || tmux new
-	    fi
-	  fi
-	fi
+    if [ -z "$TMUX" ]; then
+      case "$TERM_PROGRAM" in
+        vscode|cursor|jetbrains*)
+          # Skip auto-tmux inside IDE terminals
+          ;;
+        *)
+          if [ "$PWD" != "$HOME" ]; then
+            tmux new -c "$PWD"
+          else
+            tmux attach || tmux new
+          fi
+          ;;
+      esac
+    fi
+  fi
 	
 	# Load Powerlevel10k config if present
         [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
