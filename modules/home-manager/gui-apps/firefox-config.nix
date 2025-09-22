@@ -26,6 +26,8 @@
     "sidebar.visibility" = "expand-on-hover";
   };
 in {
+
+  # This is kinda a trial of using firefox with home manager
   
   options = {
     firefox-config.enable = lib.mkEnableOption "enables firefox config";
