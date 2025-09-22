@@ -27,7 +27,7 @@
 
     darwinConfigurations = {
       ed-incyan = nix-darwin.lib.darwinSystem {
-        specialArgs = { inherit inputs self; };
+        specialArgs = { inherit inputs; };
         modules = [
           ./hosts/ed-incyan/configuration.nix
           home-manager.darwinModules.default
