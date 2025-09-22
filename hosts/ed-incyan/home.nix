@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, inputs, lib, ... }:
 
 {
   imports = [
@@ -18,6 +18,7 @@
   #};
   
   # InCyan Git
+  git-config.enable = lib.mkForce false;
   programs.git = {
     enable = true;
     userName = "Edward Potter";
