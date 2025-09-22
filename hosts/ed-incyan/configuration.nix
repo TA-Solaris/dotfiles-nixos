@@ -11,14 +11,22 @@
 
   # Hostname
   networking.hostName = "ed-incyan";
+
+  # User
+  users.users.edwardpotter = {
+    home = "/Users/edwardpotter";
+    packages = [
+      pkgs.home-manager
+    ];
+  };
   
   # Home Manager configuration
-  #home-manager = {
-  #  extraSpecialArgs = { inherit inputs; };
-  #  users = {
-  #    "edwardpotter" = import ./home.nix;
-  #  };
-  #};
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      "edwardpotter" = import ./home.nix;
+    };
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
