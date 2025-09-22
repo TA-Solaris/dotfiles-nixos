@@ -21,7 +21,6 @@
     ./nmap.nix
     ./sl.nix
     ./tmux.nix
-    ./traceroute.nix
     ./net-tools.nix
     ./wget.nix
     ./yt-dlp.nix
@@ -48,7 +47,6 @@
     nmap.enable = lib.mkDefault true;
     sl.enable = lib.mkDefault true;
     tmux.enable = lib.mkDefault true;
-    traceroute.enable = lib.mkDefault true;
     net-tools.enable = lib.mkDefault true;
     wget.enable = lib.mkDefault true;
     yt-dlp.enable = lib.mkDefault true;

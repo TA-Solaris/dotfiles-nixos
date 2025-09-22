@@ -5,7 +5,7 @@
   };
   
   imports = [
-    ./fonts.nix
+    ./fonts-darwin.nix
     ./git.nix
   ];
 
