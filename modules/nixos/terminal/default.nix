@@ -13,6 +13,7 @@
     ./dust.nix
     ./fortune.nix
     ./fzf.nix
+    ./fd.nix
     ./gallery-dl.nix
     ./jq.nix
     ./lazydocker.nix
@@ -21,6 +22,7 @@
     ./neovim.nix
     ./nmap.nix
     ./ranger.nix
+    ./ripgrep.nix
     ./sl.nix
     ./tmux.nix
     ./traceroute.nix
@@ -43,6 +45,7 @@
     dust.enable = lib.mkDefault true;
     fortune.enable = lib.mkDefault true;
     fzf.enable = lib.mkDefault true;
+    fd.enable = lib.mkDefault true;
     gallery-dl.enable = lib.mkDefault true;
     jq.enable = lib.mkDefault true;
     lazydocker.enable = lib.mkDefault true;
@@ -51,6 +54,7 @@
     neovim.enable = lib.mkDefault true;
     nmap.enable = lib.mkDefault true;
     ranger.enable = lib.mkDefault true;
+    ripgrep.enable = lib.mkDefault true;
     sl.enable = lib.mkDefault true;
     tmux.enable = lib.mkDefault true;
     traceroute.enable = lib.mkDefault true;
