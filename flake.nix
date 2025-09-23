@@ -12,9 +12,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nvf.url = "github:notashelf/nvf";
+    mac-app-util.url = "github:hraban/mac-app-util";
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-darwin, nvf, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nix-darwin, nvf, mac-app-util, ... }@inputs: {
     nixosConfigurations = {
       ed-nixos = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
@@ -30,7 +31,16 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/ed-incyan/configuration.nix
-          home-manager.darwinModules.default
+          mac-app-util.darwinModules.default
+          home-manager.darwinModules.default/*home-manager
+          (
+            { pkgs, config, inputs, ... }:
+            {
+              home-manager.sharedModules = [
+                mac-app-util.homeManagerModules.default
+              ];
+            }
+          )*/
         ];
       };
     };
