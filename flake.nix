@@ -32,15 +32,7 @@
         modules = [
           ./hosts/ed-incyan/configuration.nix
           mac-app-util.darwinModules.default
-          home-manager.darwinModules.default/*home-manager
-          (
-            { pkgs, config, inputs, ... }:
-            {
-              home-manager.sharedModules = [
-                mac-app-util.homeManagerModules.default
-              ];
-            }
-          )*/
+          home-manager.darwinModules.default
         ];
       };
     };
