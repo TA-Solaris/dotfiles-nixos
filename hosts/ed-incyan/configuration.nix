@@ -40,6 +40,13 @@
   # Locale
   #i18n.defaultLocale = "en_GB.UTF-8";
 
+  # Extra Packages
+  environment.systemPackages = [
+    pkgs.slack
+    pkgs._1password-gui
+    pkgs._1password-cli
+  ];
+
   # Apple Silicon
   nixpkgs.hostPlatform = "aarch64-darwin";
 }
