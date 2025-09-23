@@ -19,6 +19,7 @@
       pkgs.home-manager
     ];
   };
+  system.primaryUser = "edwardpotter";
   
   # Home Manager configuration
   home-manager = {
@@ -46,6 +47,14 @@
     pkgs._1password-gui
     pkgs._1password-cli
   ];
+
+  homebrew = {
+    enable = true;
+    onActivation.cleanup = "uninstall";
+    taps = [];
+    brews = [ "angular-cli" "openvpn" "nvm" ];
+    casks = [ "caffeine" "doll" "easy-move+resize" "karabiner-elements" "maccy" "rectangle" "gimp" "dbeaver-community" "libreoffice" "shotcut" "microsoft-edge" "openvpn-connect" "grammarly-desktop" "dotnet-sdk@8" ];
+  };
 
   # Apple Silicon
   nixpkgs.hostPlatform = "aarch64-darwin";
