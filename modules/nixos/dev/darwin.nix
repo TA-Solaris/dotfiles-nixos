@@ -10,9 +10,10 @@
     ./chrome.nix
     ./cloc.nix
     ./cmake.nix
+    ./colima.nix
     ./cursor.nix
     ./dart.nix
-    #./docker.nix
+    ./docker.nix
     ./jdk.nix
     ./mkcert.nix
     #./nodejs.nix
@@ -32,9 +33,10 @@
     #dotnet.enable = lib.mkDefault true;
     cloc.enable = lib.mkDefault true;
     cmake.enable = lib.mkDefault true;
+    colima.enable = lib.mkDefault true;
     cursor.enable = lib.mkDefault true;
     dart.enable = lib.mkDefault true;
-    #docker.enable = lib.mkDefault true;
+    docker.enable = lib.mkDefault true;
     jdk.enable = lib.mkDefault true;
     mkcert.enable = lib.mkDefault true;
     #nodejs.enable = lib.mkDefault true;
