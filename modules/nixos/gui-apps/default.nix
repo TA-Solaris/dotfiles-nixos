@@ -29,6 +29,7 @@
     ./prismlauncher.nix
     ./qtpass.nix
     ./retroarch.nix
+    ./shotcut.nix
     ./sigil.nix
     ./signal.nix
     ./spotify.nix
@@ -66,6 +67,7 @@
     prismlauncher.enable = lib.mkDefault true;
     qtpass.enable = lib.mkDefault true;
     retroarch.enable = lib.mkDefault true;
+    shotcut.enable = lib.mkDefault true;
     sigil.enable = lib.mkDefault true;
     signal.enable = lib.mkDefault true;
     spotify.enable = lib.mkDefault true;

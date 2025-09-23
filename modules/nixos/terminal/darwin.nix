@@ -24,6 +24,7 @@
     ./sl.nix
     ./tmux.nix
     ./net-tools.nix
+    ./ngrok.nix
     ./wget.nix
     ./yt-dlp.nix
     ./ffmpeg.nix
@@ -52,6 +53,7 @@
     sl.enable = lib.mkDefault true;
     tmux.enable = lib.mkDefault true;
     net-tools.enable = lib.mkDefault true;
+    ngrok.enable = lib.mkDefault true;
     wget.enable = lib.mkDefault true;
     yt-dlp.enable = lib.mkDefault true;
     ffmpeg.enable = lib.mkDefault true;
