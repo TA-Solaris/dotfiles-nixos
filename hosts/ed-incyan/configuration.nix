@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, inputs, lib, ... }:
 
 {
   imports = [
@@ -48,11 +48,12 @@
     pkgs._1password-cli
   ];
 
+  dotnet.enable = lib.mkForce false;
   homebrew = {
     enable = true;
     onActivation.cleanup = "uninstall";
     taps = [];
-    brews = [ "angular-cli" "openvpn" "nvm" ];
+    brews = [ "angular-cli" "openvpn" ];
     casks = [ "caffeine" "doll" "easy-move+resize" "karabiner-elements" "maccy" "rectangle" "gimp" "dbeaver-community" "libreoffice" "shotcut" "microsoft-edge" "openvpn-connect" "grammarly-desktop" "dotnet-sdk@8" ];
   };
 

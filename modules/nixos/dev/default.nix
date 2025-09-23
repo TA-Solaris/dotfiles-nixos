@@ -30,6 +30,7 @@
     ./dbeaver.nix
     ./vscode.nix
     ./wireshark.nix
+    ./yarn.nix
   ];
 
   config = lib.mkIf config.nixos-dev.enable {
@@ -58,6 +59,7 @@
     postman.enable = lib.mkDefault true;
     dbeaver.enable = lib.mkDefault true;
     vscode.enable = lib.mkDefault true;
+    yarn.enable = lib.mkDefault true;
   };
 
 }
