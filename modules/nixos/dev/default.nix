@@ -18,6 +18,7 @@
     ./docker.nix
     ./chromium.nix
     ./jdk.nix
+    ./k6.nix
     ./mkcert.nix
     ./nodejs.nix
     ./python.nix
@@ -47,6 +48,7 @@
     docker.enable = lib.mkDefault true;
     chromium.enable = lib.mkDefault true;
     jdk.enable = lib.mkDefault true;
+    k6.enable = lib.mkDefault true;
     mkcert.enable = lib.mkDefault true;
     nodejs.enable = lib.mkDefault true;
     python.enable = lib.mkDefault true;
