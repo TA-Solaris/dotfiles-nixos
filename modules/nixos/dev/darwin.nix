@@ -14,6 +14,7 @@
     ./cursor.nix
     ./dart.nix
     ./docker.nix
+    ./dotenv-cli.nix
     ./jdk.nix
     ./k6.nix
     ./mkcert.nix
@@ -39,6 +40,7 @@
     cursor.enable = lib.mkDefault true;
     dart.enable = lib.mkDefault true;
     docker.enable = lib.mkDefault true;
+    dotenv-cli.enable = lib.mkDefault true;
     jdk.enable = lib.mkDefault true;
     k6.enable = lib.mkDefault true;
     mkcert.enable = lib.mkDefault true;
