@@ -76,6 +76,7 @@
       "grammarly-desktop"
       "dotnet-sdk@8"
       "google-chrome"
+      "burp-suite"
     ];
   };
 
