@@ -1,6 +1,9 @@
-{ pkgs, inputs, lib, ... }:
-
 {
+  pkgs,
+  inputs,
+  lib,
+  ...
+}: {
   imports = [
     ../../modules/nixos/darwin.nix
   ];
@@ -20,10 +23,10 @@
     ];
   };
   system.primaryUser = "edwardpotter";
-  
+
   # Home Manager configuration
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = {inherit inputs;};
     users = {
       "edwardpotter" = import ./home.nix;
     };
@@ -33,7 +36,7 @@
   nixpkgs.config.allowUnfree = true;
 
   # Enable experimental features
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Time zone
   time.timeZone = "Europe/London";
@@ -53,8 +56,27 @@
     enable = true;
     onActivation.cleanup = "uninstall";
     taps = [];
-    brews = [ "angular-cli" "openvpn" ];
-    casks = [ "caffeine" "doll" "easy-move+resize" "karabiner-elements" "maccy" "rectangle" "gimp" "dbeaver-community" "libreoffice" "shotcut" "microsoft-edge" "openvpn-connect" "grammarly-desktop" "dotnet-sdk@8" ];
+    brews = [
+      "angular-cli"
+      "openvpn"
+    ];
+    casks = [
+      "caffeine"
+      "doll"
+      "easy-move+resize"
+      "karabiner-elements"
+      "maccy"
+      "rectangle"
+      "gimp"
+      "dbeaver-community"
+      "libreoffice"
+      "shotcut"
+      "microsoft-edge"
+      "openvpn-connect"
+      "grammarly-desktop"
+      "dotnet-sdk@8"
+      "google-chrome"
+    ];
   };
 
   # Apple Silicon
