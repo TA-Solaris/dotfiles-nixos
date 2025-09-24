@@ -6,6 +6,7 @@
 }: {
   imports = [
     ../../modules/nixos/darwin.nix
+    ../../modules/homebrew/darwin.nix
   ];
 
   # Set Git commit hash for darwin-version.
@@ -57,26 +58,12 @@
     onActivation.cleanup = "uninstall";
     taps = [];
     brews = [
-      "angular-cli"
       "openvpn"
     ];
     casks = [
-      "caffeine"
-      "doll"
-      "easy-move+resize"
-      "karabiner-elements"
-      "maccy"
-      "rectangle"
-      "gimp"
-      "dbeaver-community"
-      "libreoffice"
-      "shotcut"
-      "microsoft-edge"
       "openvpn-connect"
       "grammarly-desktop"
       "dotnet-sdk@8"
-      "google-chrome"
-      "burp-suite"
     ];
   };
 
