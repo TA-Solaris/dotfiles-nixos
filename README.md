@@ -32,7 +32,3 @@ sudo -H darwin-rebuild switch --flake ~/.dotfiles#[configuration]
 
 - Fix syncthing
 - Fix metacleaner build
-- (Potential) Store app menu dconf
-- (Future) Set Nautilus folder bookmarks/stars
-- (Future) Mimetype default apps
-
