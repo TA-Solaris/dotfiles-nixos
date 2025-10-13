@@ -1,9 +1,13 @@
-{ pkgs, lib, config, ... }: {
-
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   options = {
     nixos-gui-apps.enable = lib.mkEnableOption "enable nixos gui apps";
   };
-  
+
   imports = [
     ./audacity.nix
     ./caprine.nix
@@ -22,7 +26,7 @@
     ./jellyfin.nix
     ./libreoffice.nix
     ./lorem.nix
-#    ./metadata-cleaner.nix    # TODO - Fix
+    ./metadata-cleaner.nix
     ./obsidian.nix
     ./paper-clip.nix
     ./pdfarranger.nix
@@ -60,7 +64,7 @@
     jellyfin.enable = lib.mkDefault true;
     libreoffice.enable = lib.mkDefault true;
     lorem.enable = lib.mkDefault true;
-#    metadata-cleaner.enable = lib.mkDefault true;
+    metadata-cleaner.enable = lib.mkDefault true;
     obsidian.enable = lib.mkDefault true;
     paper-clip.enable = lib.mkDefault true;
     pdfarranger.enable = lib.mkDefault true;
@@ -79,5 +83,4 @@
     whatsapp.enable = lib.mkDefault true;
     zenmap.enable = lib.mkDefault true;
   };
-
 }

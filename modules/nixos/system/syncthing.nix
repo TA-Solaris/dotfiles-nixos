@@ -1,5 +1,9 @@
-{ pkgs, lib, config, ... }: {
-
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   options = {
     syncthing.enable = lib.mkEnableOption "enable syncthing";
   };
@@ -8,6 +12,7 @@
     environment.systemPackages = [
       pkgs.syncthing
     ];
-  };
 
+    services.syncthing.enable = true;
+  };
 }

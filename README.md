@@ -36,8 +36,3 @@ sudo -H darwin-rebuild switch --flake ~/.dotfiles#[configuration]
 ```bash
 sudo nix flake update
 ```
-
-## TODO
-
-- Fix syncthing
-- Fix metacleaner build
