@@ -69,13 +69,4 @@
 
   # Apple Silicon
   nixpkgs.hostPlatform = "aarch64-darwin";
-
-  nix.settings.substituters = [
-    "https://cache.nixos.org"
-    "https://cache.nix-darwin.org"
-  ];
-  nix.settings.trusted-public-keys = [
-    "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJz1fHM5pE7dVDN6z0="
-    "darwin-cache-1:kQsbW9dxfpHwN2k5gZ1vZjPufT1b2tZzQ6QK8bYQEGY="
-  ];
 }
