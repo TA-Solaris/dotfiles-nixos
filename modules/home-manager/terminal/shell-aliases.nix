@@ -1,11 +1,21 @@
-{ pkgs, lib, config, ... }: {
-  
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   options = {
     shell-aliases.enable = lib.mkEnableOption "enables shell aliases";
   };
 
   config = lib.mkIf config.shell-aliases.enable {
     home.shellAliases = {
+      dtr = "dotnet run";
+      dtw = "dotnet watch";
+      yrs = "yarn start";
+      yri = "yarn install";
+      lzg = "lazygit";
+      lzd = "lazydocker";
       drm = ''
         docker rm -f $(docker ps -aq) 2>/dev/null || true
         docker volume rm $(docker volume ls -q) 2>/dev/null || true
@@ -16,5 +26,4 @@
       hc = "cd ~; clear;";
     };
   };
-
 }
