@@ -24,5 +24,13 @@ in
     };
     
     services.gpg-agent.pinentry.program = "pinentry-gnome3";
+    
+    gtk = {
+      enable = true;
+      theme = {
+        name = "Orchis-Green-Light";
+        package = pkgs.orchis-theme;
+      };
+    };
   };
 }
