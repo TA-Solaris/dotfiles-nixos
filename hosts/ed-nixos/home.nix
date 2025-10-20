@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ../../modules/home-manager/default.nix
   ];
@@ -73,6 +75,10 @@
   #
   home.sessionVariables = {
     #EDITOR = "neovim";
+  };
+
+  home.shellAliases = {
+    "nix-rebuild" = "sudo nixos-rebuild switch --flake /home/ed/.dotfiles#ed-nixos";
   };
 
   # Let Home Manager install and manage itself.
