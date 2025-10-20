@@ -13,6 +13,10 @@
       pkgs.syncthing
     ];
 
-    services.syncthing.enable = true;
+    services.syncthing {
+      enable = true;
+      user = "ed";
+      openDefaultPorts = true;
+    };
   };
 }
