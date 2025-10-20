@@ -1,5 +1,9 @@
-{ pkgs, lib, config, ... }: {
-
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   options = {
     macos.enable = lib.mkEnableOption "enable macos config";
   };
@@ -7,15 +11,13 @@
   config = lib.mkIf config.macos.enable {
     # Asthetic
     system.defaults.controlcenter.BatteryShowPercentage = true;
-    system.defaults.NSGlobalDomain.NSStatusItemSpacing = 0;
-    system.defaults.NSGlobalDomain.NSStatusItemSelectionPadding = 0;
 
     # Disable hot corners
     system.defaults.dock.wvous-bl-corner = 1;
     system.defaults.dock.wvous-br-corner = 1;
     system.defaults.dock.wvous-tl-corner = 1;
     system.defaults.dock.wvous-tr-corner = 1;
-    
+
     # Dock
     system.defaults.dock.autohide = true;
     system.defaults.dock.show-recents = false;
@@ -42,7 +44,6 @@
     # Interaction
     system.defaults.NSGlobalDomain."com.apple.swipescrolldirection" = false; # Not "Natural"
     system.defaults.NSGlobalDomain.KeyRepeat = 6;
-    system.defaults.NSGlobalDomain.InitialKeyRepeat = 3;
+    system.defaults.NSGlobalDomain.InitialKeyRepeat = 6;
   };
-
 }
