@@ -1,13 +1,16 @@
-{ pkgs, lib, config, ... }:
-
 {
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   options = {
     dconf-config.enable = lib.mkEnableOption "Enable GNOME dconf configuration";
   };
 
   config = lib.mkIf config.dconf-config.enable {
     dconf.enable = true;
-    
+
     dconf.settings = {
       "org/gnome/shell" = {
         enabled-extensions = [
@@ -25,6 +28,7 @@
           pkgs.gnomeExtensions.removable-drive-menu.extensionUuid
           pkgs.gnomeExtensions.screenshot-window-sizer.extensionUuid
           pkgs.gnomeExtensions.user-themes.extensionUuid
+          pkgs.gnomeExtensions.alphabetical-app-grid.extensionUuid
         ];
         favorite-apps = [
           "Alacritty.desktop"
@@ -32,7 +36,7 @@
           "org.gnome.Nautilus.desktop"
         ];
       };
-      
+
       "org/gnome/desktop/interface" = {
         enable-hot-corners = false;
         accent-color = "green";
@@ -45,7 +49,7 @@
         document-font-name = "JetBrainsMono Nerd Font 11";
         monospace-font-name = "JetBrainsMono Nerd Font 11";
       };
-      
+
       "org/gnome/mutter" = {
         workspaces-only-on-primary = false;
       };
@@ -63,18 +67,18 @@
         custom-theme-shrink = true;
         apply-custom-theme = true;
       };
-      
+
       "org/gnome/shell/extensions/caffeine" = {
         show-notifications = false;
       };
-      
+
       "org/gnome/shell/extensions/clipboard-indicator" = {
         paste-button = false;
         notify-on-cycle = false;
         confirm-clear = false;
         enable-keybindings = false;
       };
-      
+
       "org/gnome/shell/extensions/panelScroll" = {
         right = "workspace";
         left = "workspace";
@@ -89,7 +93,7 @@
         startup-status = 0;
         animation = 4;
       };
-      
+
       "org/gnome/shell/extensions/blur-my-shell/panel" = {
         blur = false;
       };
@@ -119,73 +123,73 @@
         show-hidden = true;
         view-type = "grid";
       };
-      
+
       "org/gnome/desktop/notifications" = {
         show-banners = false; # Do not disturb
         show-in-lock-screen = false;
       };
-      
+
       "org/gnome/shell/keybindings" = {
         show-screenshot-ui = ["<Shift><Super>s"];
         toggle-message-tray = [];
       };
-      
+
       "org/gnome/settings-daemon/plugins/media-keys" = {
         www = ["<Super>b"];
       };
-      
+
       "org/gnome/desktop/wm/keybindings" = {
         close = ["<Super>x"];
         toggle-maximized = ["<Super>m"];
       };
-      
+
       "org/gnome/desktop/privacy" = {
         remember-recent-files = false;
         remove-old-trash-files = true;
         remove-old-temp-files = true;
       };
-      
+
       "org/gnome/settings-daemon/plugins/media-keys" = {
         custom-keybindings = [
           "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
           "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
         ];
       };
-      
+
       "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
         binding = "<Super>g";
         command = "alacritty";
         name = "alacritty";
       };
-    
+
       "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
         binding = "<Super>e";
         command = "nautilus";
         name = "nautilus";
       };
-      
+
       "org/gnome/tweaks" = {
         show-extensions-notice = false;
       };
-      
+
       "org/gnome/desktop/input-sources" = {
         xkb-options = ["caps:escape_shifted_capslock"];
       };
-      
+
       "org/gnome/desktop/wm/preferences" = {
         button-layout = "appmenu:minimize,close";
         resize-with-right-button = true;
       };
-      
+
       "org/gnome/desktop/background" = {
         picture-uri = "file:///home/ed/.dotfiles/modules/home-manager/system/gnome/.wallpaper/mojave.xml";
         picture-uri-dark = "file:///home/ed/.dotfiles/modules/home-manager/system/gnome/.wallpaper/mojave.xml";
       };
-      
+
       "org/gnome/TextEditor" = {
         restore-session = false;
       };
-      
+
       "org/gnome/shell/extensions/user-theme" = {
         name = "Orchis-Green-Light";
       };

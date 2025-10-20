@@ -1,5 +1,9 @@
-{ pkgs, lib, config, ... }: {
-  
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   options = {
     gnome.enable = lib.mkEnableOption "enables gnome";
   };
@@ -17,15 +21,15 @@
       layout = "gb";
       variant = "";
     };
-    
+
     # Removed packages
-    environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs gnome-console geary epiphany yelp ];
-    
+    environment.gnome.excludePackages = with pkgs; [gnome-tour gnome-user-docs gnome-console geary epiphany yelp];
+
     # Systray icons, extensions, and theming
     environment.systemPackages = [
       pkgs.gnome-tweaks
       pkgs.gnome-firmware
-      
+
       pkgs.nordzy-cursor-theme
       pkgs.orchis-theme
 
@@ -43,17 +47,17 @@
       pkgs.gnomeExtensions.removable-drive-menu
       pkgs.gnomeExtensions.screenshot-window-sizer
       pkgs.gnomeExtensions.user-themes
+      pkgs.gnomeExtensions.alphabetical-app-grid
     ];
-    services.udev.packages = [ pkgs.gnome-settings-daemon ];
-    
+    services.udev.packages = [pkgs.gnome-settings-daemon];
+
     # Gnome games
     services.gnome.games.enable = true;
-    
+
     # Use alacritty
     programs.nautilus-open-any-terminal = {
       enable = true;
       terminal = "alacritty";
     };
   };
-
 }
