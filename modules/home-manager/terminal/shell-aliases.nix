@@ -24,6 +24,7 @@
       c = "clear";
       h = "cd ~";
       hc = "cd ~; clear;";
+      nix-clean = "sudo nix-collect-garbage -d && nix-collect-garbage -d && home-manager expire-generations -d && nix store gc && sudo nix store optimize && sudo nix profile wipe-history && home-manager remove-generations old";
     };
   };
 }
