@@ -1,6 +1,9 @@
-{ pkgs, inputs, lib, ... }:
-
 {
+  pkgs,
+  inputs,
+  lib,
+  ...
+}: {
   imports = [
     ../../modules/home-manager/darwin.nix
   ];
@@ -16,14 +19,14 @@
   #targets.darwin = {
   #  currentHostDefaults = "NSGlobalDomain";
   #};
-  
+
   # InCyan Git
   git-config.enable = lib.mkForce false;
   programs.git = {
     enable = true;
     userName = "Edward Potter";
     userEmail = "ep@incyan.com";
-      
+
     extraConfig = {
       pull.rebase = true;
     };
@@ -31,12 +34,14 @@
 
   # Custom Aliases
   home.shellAliases = {
+    "nix-rebuild" = "sudo -H darwin-rebuild switch --flake ~/.dotfiles#ed-incyan";
+
     lifewebhost = "cd ~/dev/lifelanguages3/aspnet-core/src/InCyan.LifeLanguages.HttpApi.Host; c; DOTNET_WATCH_SUPPRESS_LAUNCH_BROWSER=1 dotnet watch --non-interactive";
     lifemigrator = "cd ~/dev/lifelanguages3/aspnet-core/src/InCyan.LifeLanguages.DbMigrator; c; dotnet run";
     lifedocker = "cd ~/dev/lifelanguages3; drm; c; docker compose up --force-recreate --build";
     lifeangular = "cd ~/dev/lifelanguages3/angular; c; BROWSER=none yarn start";
     lifepublicangular = "cd ~/dev/lifelanguages3/angular-public; c; BROWSER=none yarn start:ll3";
-    ciqpublicangular  = "cd ~/dev/lifelanguages3/angular-public; c; BROWSER=none yarn start:ciq";
+    ciqpublicangular = "cd ~/dev/lifelanguages3/angular-public; c; BROWSER=none yarn start:ciq";
     lifepublicwebhost = "cd ~/dev/lifelanguages3/aspnet-core/src/InCyan.LifeLanguages.Public.HttpApi.Host; c; DOTNET_WATCH_SUPPRESS_LAUNCH_BROWSER=1 dotnet watch --non-interactive";
     lifeauth = "cd ~/dev/lifelanguages3/aspnet-core/src/InCyan.LifeLanguages.AuthServer; c; dotnet run";
     liferenderwebhost = "cd ~/dev/lifelanguages3/aspnet-core/src/InCyan.LifeLanguages.Renderer.HttpApi.Host; c; DOTNET_WATCH_SUPPRESS_LAUNCH_BROWSER=1 dotnet watch --non-interactive";
