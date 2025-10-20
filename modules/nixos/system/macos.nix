@@ -43,7 +43,9 @@
 
     # Interaction
     system.defaults.NSGlobalDomain."com.apple.swipescrolldirection" = false; # Not "Natural"
+    # 120, 90, 60, 30, 12, 6, 2
     system.defaults.NSGlobalDomain.KeyRepeat = 6;
-    system.defaults.NSGlobalDomain.InitialKeyRepeat = 6;
+    # 120, 94, 68, 35, 25, 15
+    system.defaults.NSGlobalDomain.InitialKeyRepeat = 35;
   };
 }
