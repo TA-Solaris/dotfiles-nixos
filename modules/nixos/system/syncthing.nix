@@ -12,11 +12,5 @@
     environment.systemPackages = [
       pkgs.syncthing
     ];
-
-    services.syncthing {
-      enable = true;
-      user = "ed";
-      openDefaultPorts = true;
-    };
   };
 }
