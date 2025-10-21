@@ -13,6 +13,7 @@
     ./gnome/dconf-config.nix
     ./gnome/gnome-config.nix
     ./syncthing-config.nix
+    ./gnupg/gnupg-config.nix
   ];
 
   config = lib.mkIf config.home-manager-system.enable {
@@ -20,5 +21,6 @@
     dconf-config.enable = lib.mkDefault true;
     gnome-config.enable = lib.mkDefault true;
     syncthing-config.enable = lib.mkDefault true;
+    gnupg-config.enable = lib.mkDefault true;
   };
 }

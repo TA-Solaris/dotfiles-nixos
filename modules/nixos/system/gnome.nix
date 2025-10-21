@@ -27,6 +27,7 @@
 
     # Systray icons, extensions, and theming
     environment.systemPackages = [
+      pkgs.pinentry-gnome3
       pkgs.gnome-tweaks
       pkgs.gnome-firmware
 
