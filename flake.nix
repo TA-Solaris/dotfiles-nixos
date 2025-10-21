@@ -24,6 +24,14 @@
           home-manager.nixosModules.default
         ];
       };
+
+      ed-xps = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/ed-xps/configuration.nix
+          home-manager.nixosModules.default
+        ];
+      };
     };
 
     darwinConfigurations = {
