@@ -18,6 +18,7 @@
     ./vulkan.nix
     ./wireguard.nix
     ./gnupg.nix
+    ./pass.nix
   ];
 
   config = lib.mkIf config.nixos-system.enable {
@@ -34,6 +35,7 @@
     vulkan.enable = lib.mkDefault true;
     wireguard.enable = lib.mkDefault true;
     gnupg.enable = lib.mkDefault true;
+    pass.enable = lib.mkDefault true;
   };
 
 }
