@@ -8,8 +8,6 @@
     environment.systemPackages = [
       pkgs.docker
     ];
-    
-    virtualisation.docker.enable = true;
   };
 
 }

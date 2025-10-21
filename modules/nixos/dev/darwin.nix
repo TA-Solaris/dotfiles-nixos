@@ -13,7 +13,7 @@
     ./colima.nix
     ./cursor.nix
     ./dart.nix
-    ./docker.nix
+    ./docker-darwin.nix
     ./dotenv-cli.nix
     ./jdk.nix
     ./k6.nix
@@ -39,7 +39,7 @@
     colima.enable = lib.mkDefault true;
     cursor.enable = lib.mkDefault true;
     dart.enable = lib.mkDefault true;
-    docker.enable = lib.mkDefault true;
+    docker-darwin.enable = lib.mkDefault true;
     dotenv-cli.enable = lib.mkDefault true;
     jdk.enable = lib.mkDefault true;
     k6.enable = lib.mkDefault true;
