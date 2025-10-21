@@ -8,7 +8,7 @@
     # Define a user account. Don't forget to set a password with ‘passwd’.
     users.users.ed = {
       isNormalUser = true;
-      description = "ed";
+      description = "Edward Potter";
       extraGroups = [ "networkmanager" "wheel" "uucp" "libvirt" "docker" ];
       packages = with pkgs; [];
       shell = pkgs.zsh;
