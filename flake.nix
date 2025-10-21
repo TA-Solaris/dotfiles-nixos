@@ -17,14 +17,6 @@
 
   outputs = { self, nixpkgs, home-manager, nix-darwin, nvf, mac-app-util, ... }@inputs: {
     nixosConfigurations = {
-      ed-nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./hosts/ed-nixos/configuration.nix
-          home-manager.nixosModules.default
-        ];
-      };
-
       ed-xps = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
