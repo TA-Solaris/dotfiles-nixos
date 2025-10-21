@@ -9,6 +9,7 @@
     ./git.nix
     ./wireguard.nix
     ./macos.nix
+    ./gnupg.nix
   ];
 
   config = lib.mkIf config.nixos-system.enable {
@@ -16,6 +17,7 @@
     git.enable = lib.mkDefault true;
     wireguard.enable = lib.mkDefault true;
     macos.enable = lib.mkDefault true;
+    gnupg.enable = lib.mkDefault true;
   };
 
 }

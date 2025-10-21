@@ -17,6 +17,7 @@
     ./syncthing.nix
     ./vulkan.nix
     ./wireguard.nix
+    ./gnupg.nix
   ];
 
   config = lib.mkIf config.nixos-system.enable {
@@ -32,6 +33,7 @@
     syncthing.enable = lib.mkDefault true;
     vulkan.enable = lib.mkDefault true;
     wireguard.enable = lib.mkDefault true;
+    gnupg.enable = lib.mkDefault true;
   };
 
 }
