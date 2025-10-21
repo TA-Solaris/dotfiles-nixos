@@ -42,6 +42,7 @@
         accent-color = "green";
         clock-show-weekday = true;
         clock-show-seconds = true;
+        show-battery-percentage = true;
         cursor-theme = "Nordzy-cursors";
         icon-theme = "Flatery-Teal";
         gtk-theme = "Orchis-Green-Light";
@@ -111,6 +112,7 @@
           "__network-rx_max__"
           "__network-tx_max__"
         ];
+        fixed-widths = false;
       };
 
       "org/gtk/settings/file-chooser" = {
