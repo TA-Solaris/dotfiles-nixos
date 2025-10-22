@@ -18,6 +18,7 @@
     ./docker.nix
     ./dotenv-cli.nix
     ./chromium.nix
+    ./jetbrains.nix
     ./jdk.nix
     ./k6.nix
     ./mkcert.nix
@@ -49,6 +50,7 @@
     docker.enable = lib.mkDefault true;
     dotenv-cli.enable = lib.mkDefault true;
     chromium.enable = lib.mkDefault true;
+    jetbrains.enable = lib.mkDefault true;
     jdk.enable = lib.mkDefault true;
     k6.enable = lib.mkDefault true;
     mkcert.enable = lib.mkDefault true;
