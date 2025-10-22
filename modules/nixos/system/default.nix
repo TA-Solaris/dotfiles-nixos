@@ -10,6 +10,7 @@
     ./git.nix
     ./gnome.nix
     ./network-manager.nix
+    ./openvpn.nix
     ./opengl.nix
     ./pipewire.nix
     ./proton.nix
@@ -27,6 +28,7 @@
     git.enable = lib.mkDefault true;
     gnome.enable = lib.mkDefault true;
     network-manager.enable = lib.mkDefault true;
+    openvpn.enable = lib.mkDefault true;
     opengl.enable = lib.mkDefault true;
     pipewire.enable = lib.mkDefault true;
     proton.enable = lib.mkDefault true;
