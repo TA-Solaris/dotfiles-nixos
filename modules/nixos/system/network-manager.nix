@@ -1,5 +1,9 @@
-{ pkgs, lib, config, ... }: {
-  
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   options = {
     network-manager.enable = lib.mkEnableOption "enables gnome";
   };
@@ -7,6 +11,12 @@
   config = lib.mkIf config.network-manager.enable {
     # Enable networking
     networking.networkmanager.enable = true;
-  };
 
+    # Extensions
+    environment.systemPackages = with pkgs; [
+      networkmanager-openvpn
+      networkmanager-openconnect
+      networkmanager_strongswan
+    ];
+  };
 }
