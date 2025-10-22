@@ -10,13 +10,13 @@
 
   config = lib.mkIf config.network-manager.enable {
     # Enable networking
-    networking.networkmanager.enable = true;
-
-    # Extensions
-    environment.systemPackages = with pkgs; [
-      networkmanager-openvpn
-      networkmanager-openconnect
-      networkmanager_strongswan
-    ];
+    networking.networkmanager = {
+      enable = true;
+      plugins = with pkgs; [
+        networkmanager-openvpn
+        networkmanager-openconnect
+        networkmanager_strongswan
+      ];
+    };
   };
 }
