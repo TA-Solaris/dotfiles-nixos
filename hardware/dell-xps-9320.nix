@@ -1,4 +1,4 @@
-# TODO Make camera and mic work
+# TODO Make camera work
 
 {
   config,
@@ -17,45 +17,18 @@
     Option "TearFree" "true"
   '';
   
+  # Enable hardware acceleration
+  hardware.graphics.enable = true;
+  
   # Camera
-  # https://github.com/CyberT3C/nixos-config/blob/main/dell-xps-9315-cam.nix
+  # Tracking Issue: Intel MIPI/IPU6 webcam-support
+  # https://github.com/NixOS/nixpkgs/issues/225743#issuecomment-1849613797
   hardware.ipu6 = {
     enable = false;
     platform = "ipu6ep";
   };
-  services.v4l2-relayd.instances.ipu6.enable = lib.mkForce false;
-  hardware.firmware = with pkgs; [
-    ivsc-firmware
-  ];
-  hardware.enableRedistributableFirmware = true;
-  
-  boot.kernelModules = [ "v4l2loopback" ];
-  boot.extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback ];
-  environment.systemPackages = with pkgs; (with gst_all_1; [
-    gstreamer
-    gst-plugins-base
-    gst-plugins-good
-    gst-plugins-bad
-    gst-plugins-ugly
-    gst-libav
-    gst-vaapi
-    ])   
-    ++ [
-    v4l-utils # https://discourse.nixos.org/t/v4l2loopback-cannot-find-module/26301/5
+  environment.systemPackages = with pkgs; [
     libcamera
   ];
-
-  # Enable hardware acceleration
-  hardware.graphics.enable = true;
-
-  # camera browser support
-  # XDG Portal aktivieren
-  xdg.portal = {
-    enable = true;
-    # Wichtig: wlr unterstützt KEINE Kameras!
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-gnome  # oder
-    ];
-  };
-  
 }
+

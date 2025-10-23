@@ -60,8 +60,9 @@
       enable = true;
       terminal = "alacritty";
     };
-    
+
     # Firmware upgrades
     services.fwupd.enable = true;
+    hardware.enableRedistributableFirmware = true;
   };
 }
