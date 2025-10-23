@@ -7,6 +7,8 @@
   imports = [
     ./android-studio.nix
     ./arduino.nix
+    ./awscli.nix
+    ./azure-cli.nix
     ./bruno.nix
     ./dotnet.nix
     ./burpsuite.nix
@@ -39,6 +41,8 @@
   config = lib.mkIf config.nixos-dev.enable {
     android-studio.enable = lib.mkDefault true;
     arduino.enable = lib.mkDefault true;
+    awscli.enable = lib.mkDefault true;
+    azure-cli.enable = lib.mkDefault true;
     bruno.enable = lib.mkDefault true;
     dotnet.enable = lib.mkDefault true;
     burpsuite.enable = lib.mkDefault true;
