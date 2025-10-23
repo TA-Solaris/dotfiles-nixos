@@ -11,6 +11,8 @@
   config = lib.mkIf config.macos.enable {
     # Asthetic
     system.defaults.controlcenter.BatteryShowPercentage = true;
+    system.defaults.NSGlobalDomain.NSStatusItemSpacing = 0;
+    system.defaults.NSGlobalDomain.NSStatusItemSelectionPadding = 0;
 
     # Disable hot corners
     system.defaults.dock.wvous-bl-corner = 1;
