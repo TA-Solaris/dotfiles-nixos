@@ -195,6 +195,12 @@
       "org/gnome/shell/extensions/user-theme" = {
         name = "Orchis-Green-Light";
       };
+      
+      "org/gnome/settings-daemon/plugins/color" = {
+        "night-light-schedule-from" = 5.0; # 5 am
+        "night-light-schedule-to" = 4.9833333333333334; # 4:59 am
+        "night-light-temperature" = 2400; # Don't think this is working
+      };
     };
   };
 }
