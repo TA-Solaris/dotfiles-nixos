@@ -42,6 +42,9 @@ in {
         isDefault = true;
         settings = defaultSettings;
       };
+      nativeMessagingHosts = [
+        pkgs.passff-host
+      ];
     };
   };
 
