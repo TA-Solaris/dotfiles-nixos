@@ -10,7 +10,7 @@
     ./shell-aliases.nix
     ./tmux-config.nix
     ./zoxide-config.nix
-    ./neovim/neovim-config.nix
+    ./neovim-config.nix
     ./zsh/zsh-config.nix
   ];
 

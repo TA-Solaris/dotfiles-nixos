@@ -11,7 +11,7 @@
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nvf.url = "github:notashelf/nvf";
+    nvf.url = "github:TA-Solaris/nvf";
     mac-app-util.url = "github:hraban/mac-app-util";
   };
 
@@ -34,28 +34,6 @@
           mac-app-util.darwinModules.default
           home-manager.darwinModules.default
         ];
-      };
-    };
-
-    packages = {
-      x86_64-linux = let
-        neovimPkg = (nvf.lib.neovimConfiguration {
-          inherit nixpkgs;
-          modules = [ ./modules/home-manager/terminal/neovim/nvf-config.nix ];
-        }).neovim;
-      in {
-        neovim = neovimPkg;
-        default = neovimPkg;
-      };
-
-      aarch64-darwin = let
-        neovimPkg = (nvf.lib.neovimConfiguration {
-          inherit nixpkgs;
-          modules = [ ./modules/home-manager/terminal/neovim/nvf-config.nix ];
-        }).neovim;
-      in {
-        neovim = neovimPkg;
-        default = neovimPkg;
       };
     };
   };
