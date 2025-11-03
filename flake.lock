@@ -254,11 +254,11 @@
         "nvf": "nvf_2"
       },
       "locked": {
-        "lastModified": 1762083739,
-        "narHash": "sha256-QwK+cR72o68yZtczfb9aa2ihfT7OnXuHcvNz5KYq28M=",
+        "lastModified": 1762212676,
+        "narHash": "sha256-xQtWWHXrMSwHeYuuTW/0XzWpGU/xs9HQUByte2CBCZw=",
         "owner": "TA-Solaris",
         "repo": "nvf",
-        "rev": "f59adb1f375c502bc5cae376d4c197766a5b0e2f",
+        "rev": "ac8d7fa6f3a440f336d2cb0d67a6a35ed182682e",
         "type": "github"
       },
       "original": {
