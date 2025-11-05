@@ -77,6 +77,12 @@
     #EDITOR = "neovim";
   };
 
+  programs.zsh.initContent = ''
+    if [ -f "$HOME/.secrets/AVANTE_ANTHROPIC_API_KEY" ]; then
+      export AVANTE_ANTHROPIC_API_KEY="$(<"$HOME/.secrets/AVANTE_ANTHROPIC_API_KEY")"
+    fi
+  '';
+
   home.shellAliases = {
     "nix-rebuild" = "sudo nixos-rebuild switch --flake /home/ed/.dotfiles#ed-xps";
   };
