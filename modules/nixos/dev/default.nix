@@ -1,9 +1,13 @@
-{ pkgs, lib, config, ... }: {
-
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   options = {
     nixos-dev.enable = lib.mkEnableOption "enable nixos dev";
   };
-  
+
   imports = [
     ./android-studio.nix
     ./arduino.nix
@@ -35,6 +39,7 @@
     ./dbeaver.nix
     ./vscode.nix
     ./wireshark.nix
+    ./wrangler.nix
     ./yarn.nix
   ];
 
@@ -69,7 +74,7 @@
     postman.enable = lib.mkDefault true;
     dbeaver.enable = lib.mkDefault true;
     vscode.enable = lib.mkDefault true;
+    wrangler.enable = lib.mkDefault true;
     yarn.enable = lib.mkDefault true;
   };
-
 }
