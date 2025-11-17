@@ -12,6 +12,7 @@
     ./bruno.nix
     ./dotnet.nix
     ./chrome.nix
+    ./claude.nix
     ./cloc.nix
     ./cmake.nix
     ./colima.nix
@@ -39,6 +40,7 @@
   config = lib.mkIf config.nixos-dev.enable {
     bruno.enable = lib.mkDefault true;
     dotnet.enable = lib.mkDefault true;
+    claude.enable = lib.mkDefault true;
     cloc.enable = lib.mkDefault true;
     cmake.enable = lib.mkDefault true;
     colima.enable = lib.mkDefault true;

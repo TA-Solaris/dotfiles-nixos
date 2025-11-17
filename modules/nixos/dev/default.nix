@@ -17,6 +17,7 @@
     ./dotnet.nix
     ./burpsuite.nix
     ./chrome.nix
+    ./claude.nix
     ./cloc.nix
     ./cmake.nix
     ./cursor.nix
@@ -52,6 +53,7 @@
     dotnet.enable = lib.mkDefault true;
     burpsuite.enable = lib.mkDefault true;
     chrome.enable = lib.mkDefault true;
+    claude.enable = lib.mkDefault true;
     cloc.enable = lib.mkDefault true;
     cmake.enable = lib.mkDefault true;
     cursor.enable = lib.mkDefault true;
