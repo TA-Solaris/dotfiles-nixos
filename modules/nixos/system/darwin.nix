@@ -1,15 +1,21 @@
-{ pkgs, lib, config, ... }: {
-
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   options = {
     nixos-system.enable = lib.mkEnableOption "enable nixos system";
   };
-  
+
   imports = [
     ./fonts-darwin.nix
     ./git.nix
     ./wireguard.nix
     ./macos.nix
     ./gnupg.nix
+    ./pass.nix
+    ./syncthing.nix
   ];
 
   config = lib.mkIf config.nixos-system.enable {
@@ -18,6 +24,7 @@
     wireguard.enable = lib.mkDefault true;
     macos.enable = lib.mkDefault true;
     gnupg.enable = lib.mkDefault true;
+    pass.enable = lib.mkDefault true;
+    syncthing.enable = lib.mkDefault true;
   };
-
 }
