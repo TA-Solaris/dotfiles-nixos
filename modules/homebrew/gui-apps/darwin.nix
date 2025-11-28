@@ -14,6 +14,7 @@
     ./libreoffice.nix
     ./shotcut.nix
     ./gimp.nix
+    ./inkscape.nix
     ./firefox.nix
     ./messenger.nix
     ./obsidian.nix
@@ -31,6 +32,7 @@
     libreoffice-brew.enable = lib.mkDefault true;
     shotcut-brew.enable = lib.mkDefault true;
     gimp-brew.enable = lib.mkDefault true;
+    inkscape-brew.enable = lib.mkDefault true;
     firefox-brew.enable = lib.mkDefault true;
     messenger-brew.enable = lib.mkDefault true;
     obsidian-brew.enable = lib.mkDefault true;
