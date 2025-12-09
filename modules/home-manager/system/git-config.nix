@@ -1,5 +1,9 @@
-{ pkgs, lib, config, ... }: {
-  
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   options = {
     git-config.enable = lib.mkEnableOption "enables git config";
   };
@@ -7,13 +11,13 @@
   config = lib.mkIf config.git-config.enable {
     programs.git = {
       enable = true;
-      userName = "Edward Potter";
-      userEmail = "pottered2@gmail.com";
-      
-      extraConfig = {
+      settings = {
+        user = {
+          name = "Edward Potter";
+          email = "pottered2@gmail.com";
+        };
         pull.rebase = true;
       };
     };
   };
-
 }
