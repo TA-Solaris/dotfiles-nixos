@@ -25,8 +25,10 @@
     # Removed packages
     environment.gnome.excludePackages = with pkgs; [gnome-tour gnome-user-docs gnome-console geary epiphany yelp];
 
-    # Systray icons, extensions, and theming
+    # Systray icons, clipboard, extensions, and theming
     environment.systemPackages = [
+      pkgs.wl-clipboard
+
       pkgs.pinentry-gnome3
       pkgs.gnome-tweaks
       pkgs.gnome-firmware
