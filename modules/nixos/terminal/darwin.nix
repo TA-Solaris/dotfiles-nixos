@@ -1,15 +1,20 @@
-{ pkgs, lib, config, ... }: {
-
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   options = {
     nixos-terminal.enable = lib.mkEnableOption "enable nixos terminal";
   };
-  
+
   imports = [
     ./alacritty.nix
     ./atuin.nix
     ./btop.nix
     ./cmatrix.nix
     ./cowsay.nix
+    ./delta.nix
     ./dust.nix
     ./fortune.nix
     ./fzf.nix
@@ -41,6 +46,7 @@
     btop.enable = lib.mkDefault true;
     cmatrix.enable = lib.mkDefault true;
     cowsay.enable = lib.mkDefault true;
+    delta.enable = lib.mkDefault true;
     dust.enable = lib.mkDefault true;
     fortune.enable = lib.mkDefault true;
     fzf.enable = lib.mkDefault true;
@@ -65,5 +71,4 @@
     zoxide.enable = lib.mkDefault true;
     zsh.enable = lib.mkDefault true;
   };
-
 }
