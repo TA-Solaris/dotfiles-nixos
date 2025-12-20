@@ -31,6 +31,7 @@
         sudo nix store optimise
         sudo nix profile wipe-history
       '';
+      "deep-backup" = ''rsync -avh --delete --exclude="*/.stfolder/" "$HOME/Documents/"'';
     };
   };
 }
