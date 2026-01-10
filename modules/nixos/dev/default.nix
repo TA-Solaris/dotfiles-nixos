@@ -10,6 +10,7 @@
 
   imports = [
     ./android-studio.nix
+    ./android-tools.nix
     ./arduino.nix
     ./awscli.nix
     ./azure-cli.nix
@@ -46,6 +47,7 @@
 
   config = lib.mkIf config.nixos-dev.enable {
     android-studio.enable = lib.mkDefault true;
+    android-tools.enable = lib.mkDefault true;
     arduino.enable = lib.mkDefault true;
     awscli.enable = lib.mkDefault true;
     azure-cli.enable = lib.mkDefault true;
