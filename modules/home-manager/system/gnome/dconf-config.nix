@@ -69,6 +69,12 @@
         apply-custom-theme = true;
       };
 
+      "org/gnome/shell/extensions/ding" = {
+        show-home = false;
+        show-trash = false;
+        show-volumes = false;
+      };
+
       "org/gnome/shell/extensions/caffeine" = {
         show-notifications = false;
       };
@@ -195,7 +201,7 @@
       "org/gnome/shell/extensions/user-theme" = {
         name = "Orchis-Green-Light";
       };
-      
+
       "org/gnome/settings-daemon/plugins/color" = {
         "night-light-schedule-from" = 5.0; # 5 am
         "night-light-schedule-to" = 4.9833333333333334; # 4:59 am
