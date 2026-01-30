@@ -81,6 +81,9 @@
     if [ -f "$HOME/.secrets/AVANTE_ANTHROPIC_API_KEY" ]; then
       export AVANTE_ANTHROPIC_API_KEY="$(<"$HOME/.secrets/AVANTE_ANTHROPIC_API_KEY")"
     fi
+    if [ -f "$HOME/.secrets/AUTOMWRITE_ANTHROPIC_API_KEY" ]; then
+      export ANTHROPIC_API_KEY="$(<"$HOME/.secrets/AUTOMWRITE_ANTHROPIC_API_KEY")"
+    fi
   '';
 
   home.shellAliases = {
