@@ -10,7 +10,7 @@
 
   config = lib.mkIf config.wrangler.enable {
     environment.systemPackages = [
-      pkgs.wrangler
+      #pkgs.wrangler # TODO - Fix
     ];
   };
 }
