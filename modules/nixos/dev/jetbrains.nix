@@ -1,16 +1,19 @@
-{ pkgs, lib, config, ... }: {
-
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   options = {
     jetbrains.enable = lib.mkEnableOption "enable various jetbrains IDE's";
   };
 
   config = lib.mkIf config.jetbrains.enable {
     environment.systemPackages = with pkgs; [
-      jetbrains.idea-ultimate
-      jetbrains.idea-community-src
+      jetbrains.idea
+      jetbrains.idea-oss
       jetbrains.rider
       jetbrains.webstorm
     ];
   };
-
 }
