@@ -10,7 +10,7 @@
 
   config = lib.mkIf config.czkawka.enable {
     environment.systemPackages = [
-      pkgs.czkawka
+      pkgs.czkawka-full
     ];
   };
 }
