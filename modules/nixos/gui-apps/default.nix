@@ -13,6 +13,7 @@
     ./caprine.nix
     ./clamtk.nix
     ./curtail.nix
+    ./czkawka.nix
     ./dconf-editor.nix
     ./diffuse.nix
     ./discord.nix
@@ -51,6 +52,7 @@
     caprine.enable = lib.mkDefault true;
     clamtk.enable = lib.mkDefault true;
     curtail.enable = lib.mkDefault true;
+    czkawka.enable = lib.mkDefault true;
     dconf-editor.enable = lib.mkDefault true;
     diffuse.enable = lib.mkDefault true;
     discord.enable = lib.mkDefault true;
