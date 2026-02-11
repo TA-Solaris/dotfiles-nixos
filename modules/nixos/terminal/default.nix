@@ -28,6 +28,7 @@
     ./neovim.nix
     ./nmap.nix
     ./ranger.nix
+    ./ripmime.nix
     ./ripgrep.nix
     ./sl.nix
     ./tmux.nix
@@ -62,6 +63,7 @@
     neovim.enable = lib.mkDefault true;
     nmap.enable = lib.mkDefault true;
     ranger.enable = lib.mkDefault true;
+    ripmime.enable = lib.mkDefault true;
     ripgrep.enable = lib.mkDefault true;
     sl.enable = lib.mkDefault true;
     tmux.enable = lib.mkDefault true;
