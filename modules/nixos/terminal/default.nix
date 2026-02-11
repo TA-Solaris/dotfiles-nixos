@@ -24,6 +24,7 @@
     ./lazydocker.nix
     ./lazygit.nix
     ./lolcat.nix
+    ./msgconvert.nix
     ./neovim.nix
     ./nmap.nix
     ./ranger.nix
@@ -57,6 +58,7 @@
     lazydocker.enable = lib.mkDefault true;
     lazygit.enable = lib.mkDefault true;
     lolcat.enable = lib.mkDefault true;
+    msgconvert.enable = lib.mkDefault true;
     neovim.enable = lib.mkDefault true;
     nmap.enable = lib.mkDefault true;
     ranger.enable = lib.mkDefault true;
