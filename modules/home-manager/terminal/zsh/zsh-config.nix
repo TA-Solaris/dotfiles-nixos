@@ -1,5 +1,9 @@
-{ pkgs, lib, config, ... }: {
-  
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   options = {
     zsh-config.enable = lib.mkEnableOption "enables zsh config";
   };
@@ -13,50 +17,37 @@
         enable = true;
         plugins = [
           {
-            name = "zsh-users/zsh-autosuggestions";
-          }
-          {
-            name = "zsh-users/zsh-syntax-highlighting";
-          }
-          {
             name = "romkatv/powerlevel10k";
-            tags = [ "as:theme" "depth:1" ];
+            tags = ["as:theme" "depth:1"];
           }
-          {
-            name = "plugins/git";
-            tags = [ "from:oh-my-zsh" "depth:1" ];
-          }
-          {
-            name = "plugins/zoxide";
-            tags = [ "from:oh-my-zsh" "depth:1" ];
-          }
+          {name = "zsh-users/zsh-autosuggestions";}
+          {name = "zsh-users/zsh-syntax-highlighting";}
         ];
       };
-      
+
       initContent = ''
-	if command -v tmux >/dev/null; then
-    if [ -z "$TMUX" ]; then
-      case "$TERM_PROGRAM" in
-        vscode|cursor|jetbrains*)
-          # Skip auto-tmux inside IDE terminals
-          ;;
-        *)
-          if [ "$PWD" != "$HOME" ]; then
-            tmux new -c "$PWD"
-          else
-            tmux attach || tmux new
-          fi
-          ;;
-      esac
-    fi
-  fi
-	
-	# Load Powerlevel10k config if present
+        # Load Powerlevel10k config if present
         [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+        if command -v tmux >/dev/null; then
+           if [ -z "$TMUX" ]; then
+             case "$TERM_PROGRAM" in
+               vscode|cursor|jetbrains*)
+                 # Skip auto-tmux inside IDE terminals
+                 ;;
+               *)
+                 if [ "$PWD" != "$HOME" ]; then
+                   tmux new -c "$PWD"
+                 else
+                   tmux attach || tmux new
+                 fi
+                 ;;
+             esac
+           fi
+         fi
       '';
     };
-    
+
     home.file.".p10k.zsh".source = ./.p10k.zsh;
   };
-
 }

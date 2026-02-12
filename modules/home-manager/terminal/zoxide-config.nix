@@ -1,5 +1,9 @@
-{ pkgs, lib, config, ... }: {
-  
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   options = {
     zoxide-config.enable = lib.mkEnableOption "enables zoxide config";
   };
@@ -9,7 +13,10 @@
       enable = true;
       enableBashIntegration = true;
       enableZshIntegration = true;
+
+      options = [
+        "--cmd cd"
+      ];
     };
   };
-
 }
