@@ -21,6 +21,7 @@
     ./claude.nix
     ./cloc.nix
     ./cmake.nix
+    ./codex.nix
     ./cursor.nix
     ./dart.nix
     ./docker.nix
@@ -58,6 +59,7 @@
     claude.enable = lib.mkDefault true;
     cloc.enable = lib.mkDefault true;
     cmake.enable = lib.mkDefault true;
+    codex.enable = lib.mkDefault true;
     cursor.enable = lib.mkDefault true;
     dart.enable = lib.mkDefault true;
     docker.enable = lib.mkDefault true;
