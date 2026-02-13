@@ -29,6 +29,14 @@
     environment.systemPackages = [
       pkgs.wl-clipboard
 
+      pkgs.gst_all_1.gstreamer
+      pkgs.gst_all_1.gst-plugins-base
+      pkgs.gst_all_1.gst-plugins-good
+      pkgs.gst_all_1.gst-plugins-bad
+      pkgs.gst_all_1.gst-plugins-ugly
+      pkgs.gst_all_1.gst-libav
+      pkgs.gst_all_1.gst-vaapi
+
       pkgs.pinentry-gnome3
       pkgs.gnome-tweaks
       pkgs.gnome-firmware

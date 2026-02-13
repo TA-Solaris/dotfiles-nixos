@@ -27,5 +27,6 @@
   };
   environment.systemPackages = with pkgs; [
     libcamera
+    gst_all_1.icamerasrc-ipu6ep
   ];
 }
