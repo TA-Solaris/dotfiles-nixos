@@ -23,7 +23,7 @@
     ./ghex.nix
     ./gimp.nix
     ./gparted.nix
-    ./gummi.nix
+    ./setzer.nix
     ./jellyfin.nix
     ./libreoffice.nix
     ./lorem.nix
@@ -62,7 +62,7 @@
     ghex.enable = lib.mkDefault true;
     gimp.enable = lib.mkDefault true;
     gparted.enable = lib.mkDefault true;
-    gummi.enable = lib.mkDefault true;
+    setzer.enable = lib.mkDefault true;
     jellyfin.enable = lib.mkDefault true;
     libreoffice.enable = lib.mkDefault true;
     lorem.enable = lib.mkDefault true;
