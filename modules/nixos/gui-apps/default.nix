@@ -18,6 +18,7 @@
     ./diffuse.nix
     ./discord.nix
     ./eyedropper.nix
+    ./filebot.nix
     ./firefox.nix
     ./fragments.nix
     ./ghex.nix
@@ -57,6 +58,7 @@
     diffuse.enable = lib.mkDefault true;
     discord.enable = lib.mkDefault true;
     eyedropper.enable = lib.mkDefault true;
+    filebot.enable = lib.mkDefault true;
     firefox.enable = lib.mkDefault true;
     fragments.enable = lib.mkDefault true;
     ghex.enable = lib.mkDefault true;
