@@ -33,6 +33,7 @@
     ./ripgrep.nix
     ./sl.nix
     ./tmux.nix
+    ./tor.nix
     ./traceroute.nix
     ./net-tools.nix
     ./ngrok.nix
@@ -69,6 +70,7 @@
     ripgrep.enable = lib.mkDefault true;
     sl.enable = lib.mkDefault true;
     tmux.enable = lib.mkDefault true;
+    tor.enable = lib.mkDefault true;
     traceroute.enable = lib.mkDefault true;
     net-tools.enable = lib.mkDefault true;
     ngrok.enable = lib.mkDefault true;

@@ -41,7 +41,7 @@
     ./spotify.nix
     ./steam.nix
     ./switcheroo.nix
-    ./tor.nix
+    ./tor-browser.nix
     ./video-downloader.nix
     ./vlc.nix
     ./whatsapp.nix
@@ -81,7 +81,7 @@
     spotify.enable = lib.mkDefault true;
     steam.enable = lib.mkDefault true;
     switcheroo.enable = lib.mkDefault true;
-    tor.enable = lib.mkDefault true;
+    tor-browser.enable = lib.mkDefault true;
     video-downloader.enable = lib.mkDefault true;
     vlc.enable = lib.mkDefault true;
     whatsapp.enable = lib.mkDefault true;
