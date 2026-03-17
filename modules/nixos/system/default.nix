@@ -1,10 +1,15 @@
-{ pkgs, lib, config, ... }: {
-
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   options = {
     nixos-system.enable = lib.mkEnableOption "enable nixos system";
   };
-  
+
   imports = [
+    ./age.nix
     ./fonts.nix
     ./gamemode.nix
     ./git.nix
@@ -23,6 +28,7 @@
   ];
 
   config = lib.mkIf config.nixos-system.enable {
+    age.enable = lib.mkDefault true;
     fonts.enable = lib.mkDefault true;
     gamemode.enable = lib.mkDefault true;
     git.enable = lib.mkDefault true;
@@ -39,5 +45,4 @@
     gnupg.enable = lib.mkDefault true;
     pass.enable = lib.mkDefault true;
   };
-
 }
