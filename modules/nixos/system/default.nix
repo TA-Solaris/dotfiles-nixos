@@ -20,6 +20,7 @@
     ./pipewire.nix
     ./proton.nix
     ./qemu.nix
+    ./sops.nix
     ./syncthing.nix
     ./vulkan.nix
     ./wireguard.nix
@@ -39,6 +40,7 @@
     pipewire.enable = lib.mkDefault true;
     proton.enable = lib.mkDefault true;
     qemu.enable = lib.mkDefault true;
+    sops.enable = lib.mkDefault true;
     syncthing.enable = lib.mkDefault true;
     vulkan.enable = lib.mkDefault true;
     wireguard.enable = lib.mkDefault true;
