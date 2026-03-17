@@ -10,6 +10,7 @@
 
   imports = [
     ./age.nix
+    ./colmena.nix
     ./fonts.nix
     ./gamemode.nix
     ./git.nix
@@ -30,6 +31,7 @@
 
   config = lib.mkIf config.nixos-system.enable {
     age.enable = lib.mkDefault true;
+    colmena.enable = lib.mkDefault true;
     fonts.enable = lib.mkDefault true;
     gamemode.enable = lib.mkDefault true;
     git.enable = lib.mkDefault true;
