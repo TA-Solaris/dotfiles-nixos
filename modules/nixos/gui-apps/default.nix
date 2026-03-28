@@ -29,6 +29,7 @@
     ./libreoffice.nix
     ./lorem.nix
     ./metadata-cleaner.nix
+    ./mkvtoolnix.nix
     ./obsidian.nix
     ./paper-clip.nix
     ./pdfarranger.nix
@@ -69,6 +70,7 @@
     libreoffice.enable = lib.mkDefault true;
     lorem.enable = lib.mkDefault true;
     metadata-cleaner.enable = lib.mkDefault true;
+    mkvtoolnix.enable = lib.mkDefault true;
     obsidian.enable = lib.mkDefault true;
     paper-clip.enable = lib.mkDefault true;
     pdfarranger.enable = lib.mkDefault true;
