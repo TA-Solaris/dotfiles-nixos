@@ -23,6 +23,7 @@
     ./qemu.nix
     ./sops.nix
     ./syncthing.nix
+    ./thumbnailers.nix
     ./vulkan.nix
     ./wireguard.nix
     ./gnupg.nix
@@ -44,6 +45,7 @@
     qemu.enable = lib.mkDefault true;
     sops.enable = lib.mkDefault true;
     syncthing.enable = lib.mkDefault true;
+    thumbnailers.enable = lib.mkDefault true;
     vulkan.enable = lib.mkDefault true;
     wireguard.enable = lib.mkDefault true;
     gnupg.enable = lib.mkDefault true;
