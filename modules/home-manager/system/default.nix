@@ -12,6 +12,7 @@
     ./git-config.nix
     ./gnome/dconf-config.nix
     ./gnome/gnome-config.nix
+    ./gnome/xdg-templates-config.nix
     ./syncthing-config.nix
     ./gnupg/gnupg-config.nix
   ];
@@ -20,6 +21,7 @@
     git-config.enable = lib.mkDefault true;
     dconf-config.enable = lib.mkDefault true;
     gnome-config.enable = lib.mkDefault true;
+    xdg-templates-config.enable = lib.mkDefault true;
     syncthing-config.enable = lib.mkDefault true;
     gnupg-config.enable = lib.mkDefault true;
   };
