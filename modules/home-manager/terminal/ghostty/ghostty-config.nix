@@ -1,5 +1,9 @@
-{ pkgs, lib, config, ... }: {
-
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   options = {
     ghostty-config.enable = lib.mkEnableOption "enable ghostty config";
   };
@@ -14,6 +18,7 @@
       font-size = 18
       window-padding-x = 10
       window-padding-y = 10
+      background = #181818
       background-opacity = 0.7
       background-blur = true
       cursor-style = block
@@ -27,5 +32,4 @@
       confirm-close-surface = false
     '';
   };
-
 }
