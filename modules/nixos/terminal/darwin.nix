@@ -20,6 +20,7 @@
     ./fzf.nix
     ./fd.nix
     ./gallery-dl.nix
+    ./ghostty.nix
     ./jq.nix
     ./lazydocker.nix
     ./lazygit.nix
@@ -53,6 +54,7 @@
     fzf.enable = lib.mkDefault true;
     fd.enable = lib.mkDefault true;
     gallery-dl.enable = lib.mkDefault true;
+    ghostty.enable = lib.mkDefault true;
     jq.enable = lib.mkDefault true;
     lazydocker.enable = lib.mkDefault true;
     lazygit.enable = lib.mkDefault true;

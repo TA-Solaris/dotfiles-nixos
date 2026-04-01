@@ -12,6 +12,7 @@
     ./alacritty-config.nix
     ./atuin-config.nix
     ./delta-config.nix
+    ./ghostty/ghostty-config.nix
     ./lazygit-config.nix
     ./shell-aliases.nix
     ./tmux-config.nix
@@ -24,6 +25,7 @@
     alacritty-config.enable = lib.mkDefault true;
     atuin-config.enable = lib.mkDefault true;
     delta-config.enable = lib.mkDefault true;
+    ghostty-config.enable = lib.mkDefault true;
     lazygit-config.enable = lib.mkDefault true;
     shell-aliases.enable = lib.mkDefault true;
     tmux-config.enable = lib.mkDefault true;

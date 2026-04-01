@@ -31,7 +31,7 @@
           pkgs.gnomeExtensions.alphabetical-app-grid.extensionUuid
         ];
         favorite-apps = [
-          "Alacritty.desktop"
+          "com.mitchellh.ghostty.desktop"
           "firefox.desktop"
           "org.gnome.Nautilus.desktop"
         ];
@@ -166,8 +166,8 @@
 
       "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
         binding = "<Super>g";
-        command = "alacritty";
-        name = "alacritty";
+        command = "ghostty";
+        name = "ghostty";
       };
 
       "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
