@@ -10,6 +10,7 @@
 
   config = lib.mkIf config.ghostty-config.enable {
     programs.ghostty.enable = true;
+    programs.ghostty.enableZshIntegration = false;
 
     xdg.configFile."ghostty/cursor_sweep.glsl".source = ./cursor_sweep.glsl;
 
