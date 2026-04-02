@@ -25,10 +25,19 @@
     nvf,
     mac-app-util,
     ...
-  } @ inputs: {
+  } @ inputs: let
+    mkSpecialArgs = system: {
+      inherit inputs;
+      pkgsStable = import nixpkgs-stable {
+        inherit system;
+        config.allowUnfree = true;
+      };
+    };
+  in {
     nixosConfigurations = {
       ed-xps = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
+        system = "x86_64-linux";
+        specialArgs = mkSpecialArgs "x86_64-linux";
         modules = [
           ./hosts/ed-xps/configuration.nix
           home-manager.nixosModules.default
@@ -38,7 +47,8 @@
 
     darwinConfigurations = {
       ed-incyan = nix-darwin.lib.darwinSystem {
-        specialArgs = {inherit inputs;};
+        system = "aarch64-darwin";
+        specialArgs = mkSpecialArgs "aarch64-darwin";
         modules = [
           ./hosts/ed-incyan/configuration.nix
           mac-app-util.darwinModules.default
