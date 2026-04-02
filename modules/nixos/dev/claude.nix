@@ -7,7 +7,7 @@
 }: let
   pkgs-stable = import inputs.nixpkgs-stable {
     # TODO - Do this is a more generic, reusable way
-    system = pkgs.system;
+    system = pkgs.stdenv.hostPlatform.system;
     config = {
       allowUnfree = pkgs.config.allowUnfree or false;
     };

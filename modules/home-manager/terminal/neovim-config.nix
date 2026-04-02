@@ -6,7 +6,7 @@
 
   config = lib.mkIf config.neovim-config.enable {
     home.packages = [
-      inputs.nvf.packages.${pkgs.system}.default
+      inputs.nvf.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
 
     home.sessionVariables.EDITOR = "nvim";
