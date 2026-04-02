@@ -44,7 +44,7 @@
     cloc.enable = lib.mkDefault true;
     cmake.enable = lib.mkDefault true;
     colima.enable = lib.mkDefault true;
-    cursor.enable = lib.mkDefault true;
+    #cursor.enable = lib.mkDefault true;
     dart.enable = lib.mkDefault true;
     docker-darwin.enable = lib.mkDefault true;
     dotenv-cli.enable = lib.mkDefault true;

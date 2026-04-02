@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -15,10 +16,19 @@
     mac-app-util.url = "github:hraban/mac-app-util";
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-darwin, nvf, mac-app-util, ... }@inputs: {
+  outputs = {
+    self,
+    nixpkgs,
+    nixpkgs-stable,
+    home-manager,
+    nix-darwin,
+    nvf,
+    mac-app-util,
+    ...
+  } @ inputs: {
     nixosConfigurations = {
       ed-xps = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
+        specialArgs = {inherit inputs;};
         modules = [
           ./hosts/ed-xps/configuration.nix
           home-manager.nixosModules.default
@@ -28,7 +38,7 @@
 
     darwinConfigurations = {
       ed-incyan = nix-darwin.lib.darwinSystem {
-        specialArgs = { inherit inputs; };
+        specialArgs = {inherit inputs;};
         modules = [
           ./hosts/ed-incyan/configuration.nix
           mac-app-util.darwinModules.default

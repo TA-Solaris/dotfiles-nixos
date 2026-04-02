@@ -2,15 +2,24 @@
   pkgs,
   lib,
   config,
+  inputs,
   ...
-}: {
+}: let
+  pkgs-stable = import inputs.nixpkgs-stable {
+    # TODO - Do this is a more generic, reusable way
+    system = pkgs.system;
+    config = {
+      allowUnfree = pkgs.config.allowUnfree or false;
+    };
+  };
+in {
   options = {
     claude.enable = lib.mkEnableOption "enable claude code";
   };
 
   config = lib.mkIf config.claude.enable {
     environment.systemPackages = [
-      pkgs.claude-code
+      pkgs-stable.claude-code
     ];
   };
 }
