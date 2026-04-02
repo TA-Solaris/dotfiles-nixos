@@ -31,6 +31,7 @@ in
         name = "Orchis-Green-Light";
         package = pkgs.orchis-theme;
       };
+      gtk4.theme = config.gtk.theme;
     };
   };
 }
