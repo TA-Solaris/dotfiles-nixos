@@ -16,6 +16,7 @@
     ./lazygit-config.nix
     ./shell-aliases.nix
     ./tmux-config.nix
+    ./yazi-config.nix
     ./zoxide-config.nix
     ./neovim-config.nix
     ./zsh/zsh-config.nix
@@ -29,6 +30,7 @@
     lazygit-config.enable = lib.mkDefault true;
     shell-aliases.enable = lib.mkDefault true;
     tmux-config.enable = lib.mkDefault true;
+    yazi-config.enable = lib.mkDefault true;
     zoxide-config.enable = lib.mkDefault true;
     neovim-config.enable = lib.mkDefault true;
     zsh-config.enable = lib.mkDefault true;
