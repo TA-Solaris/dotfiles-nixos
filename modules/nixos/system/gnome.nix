@@ -65,10 +65,10 @@
     # Gnome games
     services.gnome.games.enable = true;
 
-    # Use ghostty
+    # Opening terminal
     programs.nautilus-open-any-terminal = {
       enable = true;
-      terminal = "ghostty";
+      terminal = "custom";
     };
 
     # Firmware upgrades
