@@ -10,6 +10,7 @@
 
   config = lib.mkIf config.imagemagick.enable {
     environment.systemPackages = [
+      pkgs.ghostscript # Dependency for some reason not included
       pkgs.imagemagick
     ];
   };
