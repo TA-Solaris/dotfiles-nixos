@@ -60,7 +60,7 @@
     cloc.enable = lib.mkDefault true;
     cmake.enable = lib.mkDefault true;
     codex.enable = lib.mkDefault true;
-    #cursor.enable = lib.mkDefault true;
+    cursor.enable = lib.mkDefault false;
     dart.enable = lib.mkDefault true;
     docker.enable = lib.mkDefault true;
     dotenv-cli.enable = lib.mkDefault true;

@@ -51,7 +51,7 @@
 
   config = lib.mkIf config.nixos-gui-apps.enable {
     audacity.enable = lib.mkDefault true;
-    caprine.enable = lib.mkDefault true;
+    caprine.enable = lib.mkDefault false;
     clamtk.enable = lib.mkDefault true;
     curtail.enable = lib.mkDefault true;
     czkawka.enable = lib.mkDefault true;
@@ -66,7 +66,7 @@
     gimp.enable = lib.mkDefault true;
     gparted.enable = lib.mkDefault true;
     setzer.enable = lib.mkDefault true;
-    jellyfin.enable = lib.mkDefault true;
+    jellyfin.enable = lib.mkDefault false;
     libreoffice.enable = lib.mkDefault true;
     lorem.enable = lib.mkDefault true;
     metadata-cleaner.enable = lib.mkDefault true;
@@ -86,7 +86,7 @@
     tor-browser.enable = lib.mkDefault true;
     video-downloader.enable = lib.mkDefault true;
     vlc.enable = lib.mkDefault true;
-    whatsapp.enable = lib.mkDefault true;
+    whatsapp.enable = lib.mkDefault false;
     zenmap.enable = lib.mkDefault true;
   };
 }
