@@ -59,6 +59,8 @@
       pkgs.gnomeExtensions.screenshot-window-sizer
       pkgs.gnomeExtensions.user-themes
       pkgs.gnomeExtensions.alphabetical-app-grid
+      pkgs.gnomeExtensions.quick-settings-audio-devices-renamer
+      pkgs.gnomeExtensions.quick-settings-audio-devices-hider
     ];
     services.udev.packages = [pkgs.gnome-settings-daemon];
 

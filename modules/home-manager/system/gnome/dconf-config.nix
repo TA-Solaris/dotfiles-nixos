@@ -29,6 +29,8 @@
           pkgs.gnomeExtensions.screenshot-window-sizer.extensionUuid
           pkgs.gnomeExtensions.user-themes.extensionUuid
           pkgs.gnomeExtensions.alphabetical-app-grid.extensionUuid
+          pkgs.gnomeExtensions.quick-settings-audio-devices-renamer.extensionUuid
+          pkgs.gnomeExtensions.quick-settings-audio-devices-hider.extensionUuid
         ];
         favorite-apps = [
           "com.mitchellh.ghostty.desktop"
