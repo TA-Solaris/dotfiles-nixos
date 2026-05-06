@@ -40,6 +40,7 @@
       pkgs.pinentry-gnome3
       pkgs.gnome-tweaks
       pkgs.gnome-firmware
+      pkgs.cheese
 
       pkgs.nordzy-cursor-theme
       pkgs.orchis-theme
