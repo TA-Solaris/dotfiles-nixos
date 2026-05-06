@@ -4,6 +4,8 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
+    #nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    nixos-hardware.url = "github:TA-Solaris/nixos-hardware/dell-xps-13-9320";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -20,6 +22,7 @@
     self,
     nixpkgs,
     nixpkgs-stable,
+    nixos-hardware,
     home-manager,
     nix-darwin,
     nvf,

@@ -192,6 +192,22 @@
         "type": "github"
       }
     },
+    "nixos-hardware": {
+      "locked": {
+        "lastModified": 1778085282,
+        "narHash": "sha256-iyIGL2ekdvR3osJNSMTvstCaVUFhs71mwc2jvaEfUA4=",
+        "owner": "TA-Solaris",
+        "repo": "nixos-hardware",
+        "rev": "21fc29b62ff635c1b90fb50ed5afcbd722ecc1a1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "TA-Solaris",
+        "ref": "dell-xps-13-9320",
+        "repo": "nixos-hardware",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1766736597,
@@ -381,6 +397,7 @@
         "home-manager": "home-manager",
         "mac-app-util": "mac-app-util",
         "nix-darwin": "nix-darwin",
+        "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_5",
         "nixpkgs-stable": "nixpkgs-stable",
         "nvf": "nvf"

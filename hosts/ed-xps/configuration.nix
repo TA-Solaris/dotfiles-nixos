@@ -2,7 +2,6 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 {
-  config,
   pkgs,
   inputs,
   ...
@@ -10,8 +9,9 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ../../modules/nixos/default.nix
+    inputs.nixos-hardware.nixosModules.dell-xps-13-9320
     ../../hardware/dell-xps-9320.nix
+    ../../modules/nixos/default.nix
   ];
 
   # Bootloader.
