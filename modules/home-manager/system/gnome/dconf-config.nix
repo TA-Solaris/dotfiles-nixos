@@ -107,6 +107,10 @@
         blur = false;
       };
 
+      "org/gnome/shell/extensions/blur-my-shell/dash-to-dock" = {
+        blur = false;
+      };
+
       "org/gnome/shell/extensions/vitals" = {
         position-in-panel = 0;
         show-battery = true;
