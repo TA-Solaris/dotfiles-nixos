@@ -3,7 +3,19 @@
   lib,
   config,
   ...
-}: {
+}: let
+  gstPackages = with pkgs.gst_all_1; [
+    gstreamer
+    gst-plugins-base
+    gst-plugins-good
+    gst-plugins-bad
+    gst-plugins-ugly
+    gst-libav
+    gst-vaapi
+  ];
+  gstPluginPath = lib.makeSearchPathOutput "lib" "lib/gstreamer-1.0" gstPackages;
+  gstPluginScanner = "${pkgs.gst_all_1.gstreamer}/libexec/gstreamer-1.0/gst-plugin-scanner";
+in {
   options = {
     gnome.enable = lib.mkEnableOption "enables gnome";
   };
@@ -28,14 +40,6 @@
     # Systray icons, clipboard, extensions, and theming
     environment.systemPackages = [
       pkgs.wl-clipboard
-
-      pkgs.gst_all_1.gstreamer
-      pkgs.gst_all_1.gst-plugins-base
-      pkgs.gst_all_1.gst-plugins-good
-      pkgs.gst_all_1.gst-plugins-bad
-      pkgs.gst_all_1.gst-plugins-ugly
-      pkgs.gst_all_1.gst-libav
-      pkgs.gst_all_1.gst-vaapi
 
       pkgs.pinentry-gnome3
       pkgs.gnome-tweaks
@@ -62,7 +66,15 @@
       pkgs.gnomeExtensions.alphabetical-app-grid
       pkgs.gnomeExtensions.quick-settings-audio-devices-renamer
       pkgs.gnomeExtensions.quick-settings-audio-devices-hider
-    ];
+    ] ++ gstPackages;
+
+    environment.sessionVariables = {
+      # Use the package plugin dirs directly instead of the merged profile dir.
+      GST_PLUGIN_PATH_1_0 = gstPluginPath;
+      GST_PLUGIN_SYSTEM_PATH_1_0 = gstPluginPath;
+      GST_PLUGIN_SCANNER = gstPluginScanner;
+      GST_PLUGIN_SCANNER_1_0 = gstPluginScanner;
+    };
     services.udev.packages = [pkgs.gnome-settings-daemon];
 
     # Gnome games
@@ -83,17 +95,7 @@
       (self: super: {
         gnome = super.gnome.overrideScope (gself: gsuper: {
           nautilus = gsuper.nautilus.overrideAttrs (nsuper: {
-            buildInputs =
-              nsuper.buildInputs
-              ++ (with pkgs.gst_all_1; [
-                gstreamer
-                gst-plugins-base
-                gst-plugins-good
-                gst-plugins-bad
-                gst-plugins-ugly
-                gst-libav
-                gst-vaapi
-              ]);
+            buildInputs = nsuper.buildInputs ++ gstPackages;
           });
         });
       })
