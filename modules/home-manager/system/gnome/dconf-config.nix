@@ -127,6 +127,32 @@
         fixed-widths = false;
       };
 
+      "org/gnome/shell/extensions/rounded-window-corners-reborn" = {
+        skip-libadwaita-app = false;
+        global-rounded-corner-settings = with lib.gvariant;
+          mkArray [
+            (mkDictionaryEntry "padding" (mkVariant (mkArray [
+              (mkDictionaryEntry "left" (mkUint32 1))
+              (mkDictionaryEntry "right" (mkUint32 1))
+              (mkDictionaryEntry "top" (mkUint32 1))
+              (mkDictionaryEntry "bottom" (mkUint32 1))
+            ])))
+            (mkDictionaryEntry "keepRoundedCorners" (mkVariant (mkArray [
+              (mkDictionaryEntry "maximized" true)
+              (mkDictionaryEntry "fullscreen" false)
+            ])))
+            (mkDictionaryEntry "borderRadius" (mkVariant (mkUint32 12)))
+            (mkDictionaryEntry "smoothing" (mkVariant 0.0))
+            (mkDictionaryEntry "borderColor" (mkVariant (mkTuple [
+              0.5
+              0.5
+              0.5
+              1.0
+            ])))
+            (mkDictionaryEntry "enabled" (mkVariant true))
+          ];
+      };
+
       "org/gtk/settings/file-chooser" = {
         location-mode = "path-bar";
         show-hidden = true;
