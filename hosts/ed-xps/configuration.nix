@@ -9,7 +9,9 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ./sops.nix
     inputs.nixos-hardware.nixosModules.dell-xps-13-9320
+    inputs.sops-nix.nixosModules.sops
     ../../hardware/dell-xps-9320.nix
     ../../modules/nixos/default.nix
   ];

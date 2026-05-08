@@ -1,5 +1,7 @@
 {
   config,
+  lib,
+  osConfig,
   pkgs,
   ...
 }: {
@@ -57,6 +59,9 @@
     # '';
   };
 
+  home.file.".config/ngrok/ngrok.yml".source =
+    config.lib.file.mkOutOfStoreSymlink osConfig.sops.templates.ngrok-yml.path;
+
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a
   # shell provided by Home Manager. If you don't want to manage your shell
@@ -78,11 +83,11 @@
   };
 
   programs.zsh.initContent = ''
-    if [ -f "$HOME/.secrets/AVANTE_ANTHROPIC_API_KEY" ]; then
-      export AVANTE_ANTHROPIC_API_KEY="$(<"$HOME/.secrets/AVANTE_ANTHROPIC_API_KEY")"
+    if [ -f "/run/secrets/avante-anthropic-api-key" ]; then
+      export AVANTE_ANTHROPIC_API_KEY="$(<"/run/secrets/avante-anthropic-api-key")"
     fi
-    if [ -f "$HOME/.secrets/AUTOMWRITE_ANTHROPIC_API_KEY" ]; then
-      export ANTHROPIC_API_KEY="$(<"$HOME/.secrets/AUTOMWRITE_ANTHROPIC_API_KEY")"
+    if [ -f "/run/secrets/automwrite-anthropic-api-key" ]; then
+      export ANTHROPIC_API_KEY="$(<"/run/secrets/automwrite-anthropic-api-key")"
     fi
   '';
 

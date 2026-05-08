@@ -1,0 +1,4 @@
+creation_rules:
+  - path_regex: ^hosts/ed-xps/secrets\.ya?ml$
+    age: >-
+      age1eyw6w5rck68s0v6a68ywsm8rva7e56g52lsgnlg2g6dtsf8jqy8q5c8u0w
