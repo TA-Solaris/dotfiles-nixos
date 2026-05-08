@@ -5,4 +5,5 @@ modules/home-manager/system/karabiner/karabiner/automatic_backups/*
 # Generic
 .DS_Store
 
-
+# AI BS
+.codex
