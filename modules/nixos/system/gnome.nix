@@ -81,10 +81,10 @@ in {
     services.gnome.games.enable = true;
 
     # Opening terminal
-    programs.nautilus-open-any-terminal = {
-      enable = true;
-      terminal = "custom";
-    };
+    # programs.nautilus-open-any-terminal = {
+    #   enable = true;
+    #   terminal = "custom";
+    # };
 
     # Firmware upgrades
     services.fwupd.enable = true;

@@ -61,7 +61,7 @@
     fzf.enable = lib.mkDefault true;
     fd.enable = lib.mkDefault true;
     gallery-dl.enable = lib.mkDefault true;
-    ghostty.enable = lib.mkDefault true;
+    ghostty.enable = lib.mkDefault false;
     imagemagick.enable = lib.mkDefault true;
     jq.enable = lib.mkDefault true;
     lazydocker.enable = lib.mkDefault true;
