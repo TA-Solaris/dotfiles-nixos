@@ -8,10 +8,10 @@
     gstreamer
     gst-plugins-base
     gst-plugins-good
-    gst-plugins-bad
-    gst-plugins-ugly
+    #gst-plugins-bad
+    #gst-plugins-ugly
     gst-libav
-    gst-vaapi
+    #gst-vaapi
   ];
   gstPluginPath = lib.makeSearchPathOutput "lib" "lib/gstreamer-1.0" gstPackages;
   gstPluginScanner = "${pkgs.gst_all_1.gstreamer}/libexec/gstreamer-1.0/gst-plugin-scanner";
@@ -38,35 +38,37 @@ in {
     environment.gnome.excludePackages = with pkgs; [gnome-tour gnome-user-docs gnome-console geary epiphany yelp];
 
     # Systray icons, clipboard, extensions, and theming
-    environment.systemPackages = [
-      pkgs.wl-clipboard
+    environment.systemPackages =
+      [
+        pkgs.wl-clipboard
 
-      pkgs.pinentry-gnome3
-      pkgs.gnome-tweaks
-      pkgs.gnome-firmware
-      pkgs.cheese
+        pkgs.pinentry-gnome3
+        pkgs.gnome-tweaks
+        pkgs.gnome-firmware
+        pkgs.cheese
 
-      pkgs.nordzy-cursor-theme
-      pkgs.orchis-theme
+        pkgs.nordzy-cursor-theme
+        pkgs.orchis-theme
 
-      pkgs.gnomeExtensions.appindicator
-      pkgs.gnomeExtensions.blur-my-shell
-      pkgs.gnomeExtensions.caffeine
-      pkgs.gnomeExtensions.clipboard-indicator
-      pkgs.gnomeExtensions.dash-to-dock
-      pkgs.gnomeExtensions.desktop-icons-ng-ding
-      pkgs.gnomeExtensions.just-perfection
-      pkgs.gnomeExtensions.panel-scroll
-      pkgs.gnomeExtensions.rounded-corners
-      pkgs.gnomeExtensions.rounded-window-corners-reborn
-      pkgs.gnomeExtensions.vitals
-      pkgs.gnomeExtensions.removable-drive-menu
-      pkgs.gnomeExtensions.screenshot-window-sizer
-      pkgs.gnomeExtensions.user-themes
-      pkgs.gnomeExtensions.alphabetical-app-grid
-      pkgs.gnomeExtensions.quick-settings-audio-devices-renamer
-      pkgs.gnomeExtensions.quick-settings-audio-devices-hider
-    ] ++ gstPackages;
+        pkgs.gnomeExtensions.appindicator
+        pkgs.gnomeExtensions.blur-my-shell
+        pkgs.gnomeExtensions.caffeine
+        pkgs.gnomeExtensions.clipboard-indicator
+        pkgs.gnomeExtensions.dash-to-dock
+        pkgs.gnomeExtensions.desktop-icons-ng-ding
+        pkgs.gnomeExtensions.just-perfection
+        pkgs.gnomeExtensions.panel-scroll
+        pkgs.gnomeExtensions.rounded-corners
+        pkgs.gnomeExtensions.rounded-window-corners-reborn
+        pkgs.gnomeExtensions.vitals
+        pkgs.gnomeExtensions.removable-drive-menu
+        pkgs.gnomeExtensions.screenshot-window-sizer
+        pkgs.gnomeExtensions.user-themes
+        pkgs.gnomeExtensions.alphabetical-app-grid
+        pkgs.gnomeExtensions.quick-settings-audio-devices-renamer
+        pkgs.gnomeExtensions.quick-settings-audio-devices-hider
+      ]
+      ++ gstPackages;
 
     environment.sessionVariables = {
       # Use the package plugin dirs directly instead of the merged profile dir.
