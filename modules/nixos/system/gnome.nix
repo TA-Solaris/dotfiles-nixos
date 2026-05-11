@@ -6,11 +6,11 @@
 }: let
   gstPackages = with pkgs.gst_all_1; [
     gstreamer
-    #gst-plugins-base
-    #gst-plugins-good
+    gst-plugins-base
+    gst-plugins-good
     #gst-plugins-bad
     #gst-plugins-ugly
-    #gst-libav
+    gst-libav
     #gst-vaapi
   ];
   gstPluginPath = lib.makeSearchPathOutput "lib" "lib/gstreamer-1.0" gstPackages;
