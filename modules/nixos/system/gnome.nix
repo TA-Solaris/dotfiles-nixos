@@ -13,8 +13,6 @@
     gst-libav
     #gst-vaapi
   ];
-  gstPluginPath = lib.makeSearchPathOutput "lib" "lib/gstreamer-1.0" gstPackages;
-  gstPluginScanner = "${pkgs.gst_all_1.gstreamer}/libexec/gstreamer-1.0/gst-plugin-scanner";
 in {
   options = {
     gnome.enable = lib.mkEnableOption "enables gnome";
@@ -70,13 +68,6 @@ in {
       ]
       ++ gstPackages;
 
-    environment.sessionVariables = {
-      # Use the package plugin dirs directly instead of the merged profile dir.
-      GST_PLUGIN_PATH_1_0 = gstPluginPath;
-      GST_PLUGIN_SYSTEM_PATH_1_0 = gstPluginPath;
-      GST_PLUGIN_SCANNER = gstPluginScanner;
-      GST_PLUGIN_SCANNER_1_0 = gstPluginScanner;
-    };
     services.udev.packages = [pkgs.gnome-settings-daemon];
 
     # Gnome games
