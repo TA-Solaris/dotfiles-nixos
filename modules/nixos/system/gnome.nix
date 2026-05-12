@@ -4,15 +4,28 @@
   config,
   ...
 }: let
-  gstPackages = with pkgs.gst_all_1; [
+  gstPluginPackages =
+    [pkgs.pipewire]
+    ++ (with pkgs.gst_all_1; [
+      gstreamer
+      gst-plugins-base
+      gst-plugins-good
+      gst-plugins-bad
+      gst-plugins-ugly
+      gst-libav
+      gst-vaapi
+    ]);
+  gstPluginDirs = lib.unique (map (pkg: "${pkg}/lib/gstreamer-1.0") gstPluginPackages);
+  gstSystemPackages = with pkgs.gst_all_1; [
     gstreamer
     gst-plugins-base
     gst-plugins-good
-    #gst-plugins-bad
-    #gst-plugins-ugly
+    gst-plugins-bad
+    gst-plugins-ugly
     gst-libav
-    #gst-vaapi
+    gst-vaapi
   ];
+  gstPluginScanner = "${pkgs.gst_all_1.gstreamer}/libexec/gstreamer-1.0/gst-plugin-scanner";
 in {
   options = {
     gnome.enable = lib.mkEnableOption "enables gnome";
@@ -66,7 +79,16 @@ in {
         pkgs.gnomeExtensions.quick-settings-audio-devices-renamer
         pkgs.gnomeExtensions.quick-settings-audio-devices-hider
       ]
-      ++ gstPackages;
+      ++ gstSystemPackages;
+
+    # Prefer one canonical GStreamer plugin set for the whole GNOME session.
+    # Keeping the prefix aligned with GNOME Shell's own wrapper minimizes
+    # divergence while avoiding our own app-specific wrapper tweaks.
+    environment.sessionVariables = {
+      GST_PLUGIN_SYSTEM_PATH_1_0 = lib.mkForce gstPluginDirs;
+      GST_PLUGIN_SCANNER = lib.mkForce gstPluginScanner;
+      GST_PLUGIN_SCANNER_1_0 = lib.mkForce gstPluginScanner;
+    };
 
     services.udev.packages = [pkgs.gnome-settings-daemon];
 
@@ -82,16 +104,5 @@ in {
     # Firmware upgrades
     services.fwupd.enable = true;
     hardware.enableRedistributableFirmware = true;
-
-    # Fix for gstreamer in Nautilus (https://nixos.wiki/wiki/Nautilus)
-    nixpkgs.overlays = [
-      (self: super: {
-        gnome = super.gnome.overrideScope (gself: gsuper: {
-          nautilus = gsuper.nautilus.overrideAttrs (nsuper: {
-            buildInputs = nsuper.buildInputs ++ gstPackages;
-          });
-        });
-      })
-    ];
   };
 }
