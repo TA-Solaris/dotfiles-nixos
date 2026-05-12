@@ -35,6 +35,7 @@
     ./ripmime.nix
     ./ripgrep.nix
     ./sl.nix
+    ./smartmontools.nix
     ./tmux.nix
     ./tor.nix
     ./traceroute.nix
@@ -75,6 +76,7 @@
     ripmime.enable = lib.mkDefault true;
     ripgrep.enable = lib.mkDefault true;
     sl.enable = lib.mkDefault true;
+    smartmontools.enable = lib.mkDefault true;
     tmux.enable = lib.mkDefault true;
     tor.enable = lib.mkDefault true;
     traceroute.enable = lib.mkDefault true;
