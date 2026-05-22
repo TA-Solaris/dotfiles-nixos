@@ -28,6 +28,7 @@
     ./jellyfin.nix
     ./libreoffice.nix
     ./lorem.nix
+    ./meld.nix
     ./metadata-cleaner.nix
     ./mkvtoolnix.nix
     ./obsidian.nix
@@ -69,6 +70,7 @@
     jellyfin.enable = lib.mkDefault false;
     libreoffice.enable = lib.mkDefault true;
     lorem.enable = lib.mkDefault true;
+    meld.enable = lib.mkDefault true;
     metadata-cleaner.enable = lib.mkDefault true;
     mkvtoolnix.enable = lib.mkDefault true;
     obsidian.enable = lib.mkDefault true;
