@@ -15,6 +15,7 @@
     ./curtail.nix
     ./czkawka.nix
     ./dconf-editor.nix
+    ./electrum.nix
     ./diffuse.nix
     ./discord.nix
     ./eyedropper.nix
@@ -57,6 +58,7 @@
     curtail.enable = lib.mkDefault true;
     czkawka.enable = lib.mkDefault true;
     dconf-editor.enable = lib.mkDefault true;
+    electrum.enable = lib.mkDefault true;
     diffuse.enable = lib.mkDefault true;
     discord.enable = lib.mkDefault true;
     eyedropper.enable = lib.mkDefault true;
