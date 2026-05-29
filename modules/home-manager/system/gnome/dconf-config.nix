@@ -230,10 +230,10 @@
         restore-session = false;
       };
 
-      "com/github/stunkymonkey/nautilus-open-any-terminal" = {
-        custom-local-command = "ghostty --working-directory=%s";
-        use-generic-terminal-name = true;
-      };
+      # "com/github/stunkymonkey/nautilus-open-any-terminal" = {
+      #   custom-local-command = "ghostty --working-directory=%s";
+      #   use-generic-terminal-name = true;
+      # };
 
       "org/gnome/shell/extensions/user-theme" = {
         name = "Orchis-Green-Light";
