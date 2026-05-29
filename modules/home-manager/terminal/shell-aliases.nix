@@ -24,6 +24,7 @@
       c = "clear";
       h = "cd ~";
       hc = "cd ~; clear;";
+      "find-sync-conflict" = ''find ~/Documents -type f -name "*sync-conflict*" '';
       "nix-clean" = ''
         sudo nix-collect-garbage -d
         nix-collect-garbage -d
