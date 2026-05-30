@@ -32,7 +32,21 @@
         sudo nix store optimise
         sudo nix profile wipe-history
       '';
-      "deep-backup" = ''rsync -avh --delete --no-perms --no-owner --no-group --exclude="*/.stfolder/" "$HOME/Documents/"'';
     };
+
+    programs.zsh.initContent = lib.mkAfter ''
+      deep-backup() {
+        local current_dir home_dir
+        current_dir="$(pwd -P)"
+        home_dir="$(cd "$HOME" && pwd -P)"
+
+        if [ "$current_dir" = "$home_dir" ]; then
+          echo "deep-backup: refusing to run from \$HOME" >&2
+          return 1
+        fi
+
+        command rsync -avh --delete --no-perms --no-owner --no-group --exclude="*/.stfolder/" "$HOME/Documents/" "$@"
+      }
+    '';
   };
 }
