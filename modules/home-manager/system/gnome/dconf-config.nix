@@ -84,8 +84,17 @@
       "org/gnome/shell/extensions/clipboard-indicator" = {
         paste-button = false;
         notify-on-cycle = false;
+        notify-on-clear = false;
         confirm-clear = false;
         enable-keybindings = false;
+        clear-on-boot = true;
+        history-size = 50;
+        show-search-bar = false;
+        show-tag-button = false;
+        show-edit-button = false;
+        show-preview-button = false;
+        show-pin-button = false;
+        show-settings-button = false;
       };
 
       "org/gnome/shell/extensions/panelScroll" = {
