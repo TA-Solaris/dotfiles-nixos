@@ -12,6 +12,7 @@
     ./audacity.nix
     ./caprine.nix
     ./clamtk.nix
+    ./constrict.nix
     ./curtail.nix
     ./czkawka.nix
     ./dconf-editor.nix
@@ -55,6 +56,7 @@
     audacity.enable = lib.mkDefault true;
     caprine.enable = lib.mkDefault false;
     clamtk.enable = lib.mkDefault true;
+    constrict.enable = lib.mkDefault true;
     curtail.enable = lib.mkDefault true;
     czkawka.enable = lib.mkDefault true;
     dconf-editor.enable = lib.mkDefault true;
