@@ -39,6 +39,7 @@
     ./tmux.nix
     ./tor.nix
     ./traceroute.nix
+    ./tree.nix
     ./net-tools.nix
     ./ngrok.nix
     ./wget.nix
@@ -80,6 +81,7 @@
     tmux.enable = lib.mkDefault true;
     tor.enable = lib.mkDefault true;
     traceroute.enable = lib.mkDefault true;
+    tree.enable = lib.mkDefault true;
     net-tools.enable = lib.mkDefault true;
     ngrok.enable = lib.mkDefault true;
     wget.enable = lib.mkDefault true;
