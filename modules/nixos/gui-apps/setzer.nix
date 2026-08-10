@@ -10,7 +10,7 @@
 
   config = lib.mkIf config.setzer.enable {
     environment.systemPackages = [
-      pkgs.texlive.combined.scheme-full
+      pkgs.texliveFull
       pkgs.setzer
     ];
   };

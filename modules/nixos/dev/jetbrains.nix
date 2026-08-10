@@ -11,7 +11,6 @@
   config = lib.mkIf config.jetbrains.enable {
     environment.systemPackages = with pkgs; [
       jetbrains.idea
-      jetbrains.idea-oss
       jetbrains.rider
       jetbrains.webstorm
     ];

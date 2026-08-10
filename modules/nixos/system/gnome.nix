@@ -13,7 +13,6 @@
       gst-plugins-bad
       gst-plugins-ugly
       gst-libav
-      gst-vaapi
     ]);
   gstPluginDirs = lib.unique (map (pkg: "${pkg}/lib/gstreamer-1.0") gstPluginPackages);
   gstSystemPackages = with pkgs.gst_all_1; [
@@ -23,7 +22,6 @@
     gst-plugins-bad
     gst-plugins-ugly
     gst-libav
-    gst-vaapi
   ];
   gstPluginScanner = "${pkgs.gst_all_1.gstreamer}/libexec/gstreamer-1.0/gst-plugin-scanner";
 in {
