@@ -13,10 +13,10 @@
       enable = true;
       settings = {
         git = {
-          pagers = [
+          diffRenderers = [
             {
               colorArg = "always";
-              pager = ''delta --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"'';
+              command = ''delta --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"'';
             }
           ];
           showBottomLine = false;
