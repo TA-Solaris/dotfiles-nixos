@@ -19,7 +19,7 @@
           pkgs.gnomeExtensions.caffeine.extensionUuid
           pkgs.gnomeExtensions.clipboard-indicator.extensionUuid
           pkgs.gnomeExtensions.dash-to-dock.extensionUuid
-          pkgs.gnomeExtensions.desktop-icons-ng-ding.extensionUuid
+          # pkgs.gnomeExtensions.desktop-icons-ng-ding.extensionUuid # TODO Enable when stable
           pkgs.gnomeExtensions.just-perfection.extensionUuid
           pkgs.gnomeExtensions.panel-scroll.extensionUuid
           pkgs.gnomeExtensions.rounded-corners.extensionUuid
