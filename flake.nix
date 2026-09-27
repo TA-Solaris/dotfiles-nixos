@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-wireplumber.url = "github:NixOS/nixpkgs/0e251e24a4f24e036a084b6b4b2d2491af4167f4";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
     #nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     nixos-hardware.url = "github:TA-Solaris/nixos-hardware/dell-xps-13-9320";
