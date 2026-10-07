@@ -20,6 +20,7 @@
     ./dart.nix
     ./docker-darwin.nix
     ./dotenv-cli.nix
+    ./githubcli.nix
     ./jdk.nix
     ./k6.nix
     ./mkcert.nix
@@ -48,6 +49,7 @@
     dart.enable = lib.mkDefault true;
     docker-darwin.enable = lib.mkDefault true;
     dotenv-cli.enable = lib.mkDefault true;
+    githubcli.enable = lib.mkDefault true;
     jdk.enable = lib.mkDefault true;
     k6.enable = lib.mkDefault true;
     mkcert.enable = lib.mkDefault true;
