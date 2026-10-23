@@ -29,6 +29,7 @@
     ./php.nix
     ./poetry.nix
     ./rust.nix
+    ./sentry-cli.nix
     ./stripe-cli.nix
     ./twilio-cli.nix
     ./postman.nix
@@ -58,6 +59,7 @@
     php.enable = lib.mkDefault true;
     poetry.enable = lib.mkDefault true;
     rust.enable = lib.mkDefault true;
+    sentry-cli.enable = lib.mkDefault true;
     stripe-cli.enable = lib.mkDefault true;
     twilio-cli.enable = lib.mkDefault true;
     wireshark.enable = lib.mkDefault true;
