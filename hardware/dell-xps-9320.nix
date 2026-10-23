@@ -14,6 +14,8 @@
   hardware.graphics.enable = true;
 
   # Camera
+  # Fix 2026-10-23: disable the imported camera support until the v4l2loopback module collision is fixed.
+  hardware.ipu6.enable = false;
   # Tracking Issue: Intel MIPI/IPU6 webcam-support
   # https://github.com/NixOS/nixpkgs/issues/225743#issuecomment-1849613797
   #hardware.ipu6 = {

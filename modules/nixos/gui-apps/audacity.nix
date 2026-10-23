@@ -1,13 +1,16 @@
-{ pkgs, lib, config, ... }: {
-
+{
+  pkgsStable,
+  lib,
+  config,
+  ...
+}: {
   options = {
     audacity.enable = lib.mkEnableOption "enable audacity";
   };
 
   config = lib.mkIf config.audacity.enable {
     environment.systemPackages = [
-      pkgs.audacity
+      pkgsStable.audacity
     ];
   };
-
 }
