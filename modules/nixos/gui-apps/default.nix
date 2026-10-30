@@ -24,6 +24,7 @@
     ./firefox.nix
     ./fragments.nix
     ./ghex.nix
+    ./gifcurry.nix
     ./gimp.nix
     ./gparted.nix
     ./setzer.nix
@@ -68,6 +69,7 @@
     firefox.enable = lib.mkDefault true;
     fragments.enable = lib.mkDefault true;
     ghex.enable = lib.mkDefault true;
+    gifcurry.enable = lib.mkDefault true;
     gimp.enable = lib.mkDefault true;
     gparted.enable = lib.mkDefault true;
     setzer.enable = lib.mkDefault true;
