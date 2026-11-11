@@ -1,5 +1,5 @@
 {
-  pkgs,
+  pkgsStable,
   lib,
   config,
   ...
@@ -10,7 +10,7 @@
 
   config = lib.mkIf config.codex.enable {
     environment.systemPackages = [
-      pkgs.codex
+      pkgsStable.codex
     ];
   };
 }

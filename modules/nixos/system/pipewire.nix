@@ -13,7 +13,6 @@
       alsa.enable = true;
       alsa.support32Bit = true;
       pulse.enable = true;
-      jack.enable = true;
       wireplumber.enable = true;
       wireplumber.package = inputs.nixpkgs-wireplumber.legacyPackages.${pkgs.stdenv.hostPlatform.system}.wireplumber;
     };
@@ -25,6 +24,7 @@
     environment.systemPackages = with pkgs; [
       alsa-utils
       pavucontrol
+      pipewire.jack
     ];
   };
 
