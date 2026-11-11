@@ -42,6 +42,7 @@
       "org/gnome/desktop/interface" = {
         enable-hot-corners = false;
         accent-color = "green";
+        color-scheme = "default";
         clock-show-weekday = true;
         clock-show-seconds = true;
         show-battery-percentage = true;

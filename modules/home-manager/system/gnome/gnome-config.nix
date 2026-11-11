@@ -1,11 +1,25 @@
 { pkgs, lib, config, ... }:
 
-let 
-  flatery = pkgs.fetchFromGitHub {
-    owner = "cbrnix";
-    repo = "Flatery";
-    tag = "Flatery";
-    sha256 = "sha256-cOoID7ykJmu6ZVb6kQwgLZJ1Vr4HEuSxX84pZKTu+k4=";
+let
+  flatery-icons = pkgs.stdenvNoCC.mkDerivation {
+    pname = "flatery-icon-theme";
+    version = "unstable";
+    src = pkgs.fetchFromGitHub {
+      owner = "cbrnix";
+      repo = "Flatery";
+      tag = "Flatery";
+      sha256 = "sha256-cOoID7ykJmu6ZVb6kQwgLZJ1Vr4HEuSxX84pZKTu+k4=";
+    };
+    dontBuild = true;
+    installPhase = ''
+      runHook preInstall
+      mkdir -p $out/share/icons
+      for d in Flatery Flatery-*; do
+        [ -d "$d" ] && cp -r "$d" "$out/share/icons/"
+      done
+      runHook postInstall
+    '';
+    dontCheckForBrokenSymlinks = true;
   };
 in
 {
@@ -18,13 +32,11 @@ in
     home.file.".face" = {
       source = ./.face.png;
     };
-    
-    home.file.".icons" = {
-      source = "${flatery}";
-    };
-    
+
+    home.packages = [ flatery-icons ];
+
     services.gpg-agent.pinentry.program = "pinentry-gnome3";
-    
+
     gtk = {
       enable = true;
       theme = {
@@ -32,6 +44,19 @@ in
         package = pkgs.orchis-theme;
       };
       gtk4.theme = config.gtk.theme;
+      iconTheme = {
+        name = "Flatery-Teal";
+        package = flatery-icons;
+      };
+    };
+
+    home.pointerCursor = {
+      enable = true;
+      name = "Nordzy-cursors";
+      package = pkgs.nordzy-cursor-theme;
+      size = 24;
+      gtk.enable = true;
+      x11.enable = true;
     };
   };
 }
