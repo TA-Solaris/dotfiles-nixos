@@ -1,4 +1,4 @@
-{ pkgs, lib, config, ... }:
+{ pkgs, lib, config, inputs, ... }:
 
 let
   flatery-icons = pkgs.stdenvNoCC.mkDerivation {
@@ -33,7 +33,10 @@ in
       source = ./.face.png;
     };
 
-    home.packages = [ flatery-icons ];
+    home.packages = [
+      flatery-icons
+      inputs.orchis-reborn.packages.${pkgs.stdenv.hostPlatform.system}.Orchis-Reborn
+    ];
 
     services.gpg-agent.pinentry.program = "pinentry-gnome3";
 

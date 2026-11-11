@@ -408,6 +408,27 @@
         "type": "github"
       }
     },
+    "orchis-reborn": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1794429703,
+        "narHash": "sha256-6T0Wnjhk8RxE6EvVK3KXYu4l/RuMDKYEmsIe1vSsiSY=",
+        "owner": "TA-Solaris",
+        "repo": "Orchis-Reborn-theme",
+        "rev": "cff5b0c9258b8ecb3b46e9a65066c9f295033ab0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "TA-Solaris",
+        "ref": "master",
+        "repo": "Orchis-Reborn-theme",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
@@ -418,6 +439,7 @@
         "nixpkgs-stable": "nixpkgs-stable",
         "nixpkgs-wireplumber": "nixpkgs-wireplumber",
         "nvf": "nvf",
+        "orchis-reborn": "orchis-reborn",
         "sops-nix": "sops-nix"
       }
     },
