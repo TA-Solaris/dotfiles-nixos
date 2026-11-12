@@ -415,11 +415,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794476431,
-        "narHash": "sha256-MTVOsDGvU+g7NWgCJ/2CUQVvWiKSuYNMgsuwRSY9Sag=",
+        "lastModified": 1794477601,
+        "narHash": "sha256-BHTEhwJ9R1Sb2N8bfrgFGZCFZ+PCkdPg+Vc8CIJ3QKs=",
         "owner": "TA-Solaris",
         "repo": "Orchis-Reborn-theme",
-        "rev": "1bf88631b030acd8976bf8e7b135c8c3f9331bae",
+        "rev": "035e04d979e770975d2618cecce98b3e58c20e3b",
         "type": "github"
       },
       "original": {

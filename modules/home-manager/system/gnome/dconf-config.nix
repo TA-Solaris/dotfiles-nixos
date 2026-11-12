@@ -251,7 +251,7 @@
       # };
 
       "org/gnome/shell/extensions/user-theme" = {
-        name = "Orchis-Reborn";
+        name = "Orchis-Reborn-Light";
       };
 
       "org/gnome/settings-daemon/plugins/color" = {

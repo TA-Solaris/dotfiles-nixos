@@ -49,8 +49,8 @@ in
         package = pkgs.adw-gtk3;
       };
       gtk4.theme = {
-        name = "Orchis-Reborn";
-        package = inputs.orchis-reborn.packages.${pkgs.stdenv.hostPlatform.system}.Orchis-Reborn;
+        name = "Orchis-Reborn-Light";
+        package = inputs.orchis-reborn.packages.${pkgs.stdenv.hostPlatform.system}.Orchis-Reborn-Light;
       };
       iconTheme = {
         name = "Flatery-Teal";
