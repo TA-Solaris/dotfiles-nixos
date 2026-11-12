@@ -1,4 +1,4 @@
-{ pkgs, inputs, lib, config, ... }: {
+{ pkgs, lib, config, ... }: {
 
   options = {
     pipewire.enable = lib.mkEnableOption "enable pipewire";
@@ -14,7 +14,6 @@
       alsa.support32Bit = true;
       pulse.enable = true;
       wireplumber.enable = true;
-      wireplumber.package = inputs.nixpkgs-wireplumber.legacyPackages.${pkgs.stdenv.hostPlatform.system}.wireplumber;
     };
     
     # Enable ALSA support with persistence

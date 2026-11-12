@@ -14,7 +14,7 @@
     dconf.settings = {
       "org/gnome/shell" = {
         always-show-log-out = true;
-        # shortcut: bypasses version checks
+        # Allow extensions regardless of their declared GNOME version support.
         disable-extension-version-validation = true;
         enabled-extensions = [
           pkgs.gnomeExtensions.appindicator.extensionUuid
@@ -259,7 +259,7 @@
       "org/gnome/settings-daemon/plugins/color" = {
         "night-light-schedule-from" = 5.0; # 5 am
         "night-light-schedule-to" = 4.9833333333333334; # 4:59 am
-        "night-light-temperature" = 2400; # Don't think this is working
+        "night-light-temperature" = 2400;
       };
     };
   };

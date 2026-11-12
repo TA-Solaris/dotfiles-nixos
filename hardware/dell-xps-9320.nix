@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   # Fingerprint sensor
-  #services.fprintd.enable = true;
+  services.fprintd.enable = true;
 
   # Fix screen tearing
   # https://nixos.org/manual/nixos/stable/index.html#sec-x11--graphics-cards-intel
