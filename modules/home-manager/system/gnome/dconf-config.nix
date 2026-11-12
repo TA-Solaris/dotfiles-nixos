@@ -48,7 +48,7 @@
         show-battery-percentage = true;
         cursor-theme = "Nordzy-cursors";
         icon-theme = "Flatery-Teal";
-        gtk-theme = "Orchis-Green-Light";
+        gtk-theme = "adw-gtk3";
         font-name = "JetBrainsMono Nerd Font 11";
         document-font-name = "JetBrainsMono Nerd Font 11";
         monospace-font-name = "JetBrainsMono Nerd Font 11";

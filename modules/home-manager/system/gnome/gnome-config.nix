@@ -43,8 +43,10 @@ in
     gtk = {
       enable = true;
       theme = {
-        name = "Orchis-Green-Light";
-        package = pkgs.orchis-theme;
+        # name = "Orchis-Green-Light";
+        # package = pkgs.orchis-theme;
+        name = "adw-gtk3";
+        package = pkgs.adw-gtk3;
       };
       gtk4.theme = {
         name = "Orchis-Reborn";

@@ -57,7 +57,7 @@ in {
         pkgs.cheese
 
         pkgs.nordzy-cursor-theme
-        pkgs.orchis-theme
+        # pkgs.orchis-theme
 
         pkgs.gnomeExtensions.appindicator
         pkgs.gnomeExtensions.blur-my-shell
