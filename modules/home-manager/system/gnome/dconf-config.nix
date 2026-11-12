@@ -13,6 +13,7 @@
 
     dconf.settings = {
       "org/gnome/shell" = {
+        always-show-log-out = true;
         enabled-extensions = [
           pkgs.gnomeExtensions.appindicator.extensionUuid
           pkgs.gnomeExtensions.blur-my-shell.extensionUuid
