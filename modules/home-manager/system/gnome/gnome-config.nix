@@ -46,7 +46,10 @@ in
         name = "Orchis-Green-Light";
         package = pkgs.orchis-theme;
       };
-      gtk4.theme = config.gtk.theme;
+      gtk4.theme = {
+        name = "Orchis-Reborn";
+        package = inputs.orchis-reborn.packages.${pkgs.stdenv.hostPlatform.system}.Orchis-Reborn;
+      };
       iconTheme = {
         name = "Flatery-Teal";
         package = flatery-icons;
