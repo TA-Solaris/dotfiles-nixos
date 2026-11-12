@@ -35,7 +35,7 @@ in
 
     home.packages = [
       flatery-icons
-      inputs.orchis-reborn.packages.${pkgs.stdenv.hostPlatform.system}.Orchis-Reborn
+      inputs.orchis-reborn.packages.${pkgs.stdenv.hostPlatform.system}.all
     ];
 
     services.gpg-agent.pinentry.program = "pinentry-gnome3";
