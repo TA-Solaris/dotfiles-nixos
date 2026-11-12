@@ -32,7 +32,7 @@
         if command -v tmux >/dev/null; then
            if [ -z "$TMUX" ]; then
              case "$TERM_PROGRAM" in
-               vscode|cursor|jetbrains*)
+               vscode|jetbrains*)
                  # Skip auto-tmux inside IDE terminals
                  ;;
                *)

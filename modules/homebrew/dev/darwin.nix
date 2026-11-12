@@ -10,7 +10,6 @@
 
   imports = [
     ./android-studio.nix
-    ./angular-cli.nix
     ./arduino.nix
     ./burp-suite.nix
     ./dbeaver-community.nix
@@ -20,7 +19,6 @@
 
   config = lib.mkIf config.homebrew-dev.enable {
     android-studio-brew.enable = lib.mkDefault true;
-    angular-cli-brew.enable = lib.mkDefault true;
     arduino-brew.enable = lib.mkDefault true;
     burp-suite-brew.enable = lib.mkDefault true;
     dbeaver-community-brew.enable = lib.mkDefault true;

@@ -9,7 +9,6 @@
   };
 
   imports = [
-    ./alacritty.nix
     ./ascii-image-converter.nix
     ./atuin.nix
     ./btop.nix
@@ -51,7 +50,6 @@
   ];
 
   config = lib.mkIf config.nixos-terminal.enable {
-    alacritty.enable = lib.mkDefault true;
     ascii-image-converter.enable = lib.mkDefault true;
     atuin.enable = lib.mkDefault true;
     btop.enable = lib.mkDefault true;

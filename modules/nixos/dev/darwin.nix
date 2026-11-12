@@ -9,14 +9,16 @@
   };
 
   imports = [
+    ./android-tools.nix
+    ./awscli.nix
+    ./azure-cli.nix
     ./bruno.nix
-    ./dotnet.nix
     ./chrome.nix
     ./claude.nix
     ./cloc.nix
     ./cmake.nix
+    ./codex.nix
     ./colima.nix
-    ./cursor.nix
     ./dart.nix
     ./docker-darwin.nix
     ./dotenv-cli.nix
@@ -40,13 +42,15 @@
   ];
 
   config = lib.mkIf config.nixos-dev.enable {
+    android-tools.enable = lib.mkDefault true;
+    awscli.enable = lib.mkDefault true;
+    azure-cli.enable = lib.mkDefault true;
     bruno.enable = lib.mkDefault true;
-    dotnet.enable = lib.mkDefault true;
     claude.enable = lib.mkDefault true;
     cloc.enable = lib.mkDefault true;
     cmake.enable = lib.mkDefault true;
+    codex.enable = lib.mkDefault true;
     colima.enable = lib.mkDefault true;
-    cursor.enable = lib.mkDefault false;
     dart.enable = lib.mkDefault true;
     docker-darwin.enable = lib.mkDefault true;
     dotenv-cli.enable = lib.mkDefault true;

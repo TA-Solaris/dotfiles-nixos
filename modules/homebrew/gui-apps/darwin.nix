@@ -23,7 +23,6 @@
     ./signal.nix
     ./steam.nix
     ./tor.nix
-    ./whatsapp.nix
   ];
 
   config = lib.mkIf config.homebrew-gui-apps.enable {
@@ -41,6 +40,5 @@
     signal-brew.enable = lib.mkDefault true;
     steam-brew.enable = lib.mkDefault true;
     tor-brew.enable = lib.mkDefault true;
-    whatsapp-brew.enable = lib.mkDefault true;
   };
 }

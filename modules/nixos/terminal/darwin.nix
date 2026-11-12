@@ -9,7 +9,6 @@
   };
 
   imports = [
-    ./alacritty.nix
     ./atuin.nix
     ./btop.nix
     ./cmatrix.nix
@@ -43,7 +42,6 @@
   ];
 
   config = lib.mkIf config.nixos-terminal.enable {
-    alacritty.enable = lib.mkDefault true;
     atuin.enable = lib.mkDefault true;
     btop.enable = lib.mkDefault true;
     cmatrix.enable = lib.mkDefault true;

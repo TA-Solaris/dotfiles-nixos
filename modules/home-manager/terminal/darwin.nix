@@ -9,7 +9,6 @@
   };
 
   imports = [
-    ./alacritty-config.nix
     ./atuin-config.nix
     ./delta-config.nix
     ./ghostty/ghostty-config.nix
@@ -23,7 +22,6 @@
   ];
 
   config = lib.mkIf config.home-manager-terminal.enable {
-    alacritty-config.enable = lib.mkDefault true;
     atuin-config.enable = lib.mkDefault true;
     delta-config.enable = lib.mkDefault true;
     ghostty-config.enable = lib.mkDefault true;

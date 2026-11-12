@@ -15,14 +15,12 @@
     ./awscli.nix
     ./azure-cli.nix
     ./bruno.nix
-    ./dotnet.nix
     ./burpsuite.nix
     ./chrome.nix
     ./claude.nix
     ./cloc.nix
     ./cmake.nix
     ./codex.nix
-    ./cursor.nix
     ./dart.nix
     ./docker.nix
     ./dotenv-cli.nix
@@ -55,14 +53,12 @@
     awscli.enable = lib.mkDefault true;
     azure-cli.enable = lib.mkDefault true;
     bruno.enable = lib.mkDefault true;
-    dotnet.enable = lib.mkDefault true;
     burpsuite.enable = lib.mkDefault true;
     chrome.enable = lib.mkDefault true;
     claude.enable = lib.mkDefault true;
     cloc.enable = lib.mkDefault true;
     cmake.enable = lib.mkDefault true;
     codex.enable = lib.mkDefault true;
-    cursor.enable = lib.mkDefault false;
     dart.enable = lib.mkDefault true;
     docker.enable = lib.mkDefault true;
     dotenv-cli.enable = lib.mkDefault true;

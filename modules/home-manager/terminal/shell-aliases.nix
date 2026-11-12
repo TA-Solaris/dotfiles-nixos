@@ -10,10 +10,6 @@
 
   config = lib.mkIf config.shell-aliases.enable {
     home.shellAliases = {
-      dtr = "dotnet run";
-      dtw = "dotnet watch";
-      yrs = "yarn start";
-      yri = "yarn install";
       lzg = "lazygit";
       lzd = "lazydocker";
       drm = ''
