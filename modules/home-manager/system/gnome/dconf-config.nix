@@ -14,13 +14,15 @@
     dconf.settings = {
       "org/gnome/shell" = {
         always-show-log-out = true;
+        # shortcut: bypasses version checks
+        disable-extension-version-validation = true;
         enabled-extensions = [
           pkgs.gnomeExtensions.appindicator.extensionUuid
           pkgs.gnomeExtensions.blur-my-shell.extensionUuid
           pkgs.gnomeExtensions.caffeine.extensionUuid
           pkgs.gnomeExtensions.clipboard-indicator.extensionUuid
           pkgs.gnomeExtensions.dash-to-dock.extensionUuid
-          # pkgs.gnomeExtensions.desktop-icons-ng-ding.extensionUuid # TODO Enable when stable
+          pkgs.gnomeExtensions.desktop-icons-ng-ding.extensionUuid
           pkgs.gnomeExtensions.just-perfection.extensionUuid
           pkgs.gnomeExtensions.panel-scroll.extensionUuid
           pkgs.gnomeExtensions.rounded-corners.extensionUuid
