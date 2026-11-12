@@ -118,6 +118,10 @@
         blur = false;
       };
 
+      "org/gnome/shell/extensions/blur-my-shell/popup" = {
+        blur = false;
+      };
+
       "org/gnome/shell/extensions/blur-my-shell/dash-to-dock" = {
         blur = false;
       };
