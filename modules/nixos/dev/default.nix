@@ -26,7 +26,7 @@
     ./dotenv-cli.nix
     ./chromium.nix
     ./githubcli.nix
-    ./happy-coder.nix
+    ./happy.nix
     ./jetbrains.nix
     ./jdk.nix
     ./k6.nix
@@ -65,7 +65,7 @@
     dotenv-cli.enable = lib.mkDefault true;
     chromium.enable = lib.mkDefault true;
     githubcli.enable = lib.mkDefault true;
-    happy-coder.enable = lib.mkDefault true;
+    happy.enable = lib.mkDefault true;
     jetbrains.enable = lib.mkDefault true;
     jdk.enable = lib.mkDefault true;
     k6.enable = lib.mkDefault true;
